@@ -1,1 +1,2037 @@
-#
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Anjona Ladies Tailors</title>
+
+    <meta name="description"
+          content="Anjona Ladies Tailors - Ladies tailoring, custom dress design and stitching services.">
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        html{
+            scroll-behavior:smooth;
+        }
+
+        body{
+            font-family:Arial, Helvetica, sans-serif;
+            background:#fffafc;
+            color:#3e2933;
+            overflow-x:hidden;
+        }
+
+        a{
+            text-decoration:none;
+            color:inherit;
+        }
+
+        img{
+            max-width:100%;
+            display:block;
+        }
+
+        button,
+        input,
+        select,
+        textarea{
+            font-family:inherit;
+        }
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header{
+            position:sticky;
+            top:0;
+            z-index:1000;
+            background:rgba(255,250,252,.96);
+            backdrop-filter:blur(12px);
+            border-bottom:1px solid #f0dfe7;
+        }
+
+        .navbar{
+            width:min(1180px,calc(100% - 30px));
+            min-height:72px;
+            margin:auto;
+            display:flex;
+            align-items:center;
+            gap:25px;
+        }
+
+        .logo{
+            display:flex;
+            align-items:center;
+            gap:10px;
+            flex-shrink:0;
+        }
+
+        .logo-mark{
+            width:44px;
+            height:44px;
+            border-radius:50%;
+            background:#ead0dc;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            font-size:20px;
+        }
+
+        .logo-text{
+            font-family:Georgia,serif;
+            font-size:19px;
+            font-weight:bold;
+            color:#6c3d54;
+            white-space:nowrap;
+        }
+
+        .nav-links{
+            margin-left:auto;
+            display:flex;
+            align-items:center;
+            gap:24px;
+        }
+
+        .nav-links a{
+            font-size:12px;
+            font-weight:600;
+            color:#674d59;
+        }
+
+        .nav-links a:hover{
+            color:#a74f78;
+        }
+
+        .header-btn{
+            padding:11px 18px;
+            border-radius:30px;
+            background:#9e4e75;
+            color:#fff;
+            font-size:11px;
+            font-weight:bold;
+        }
+
+        .header-btn:hover{
+            background:#813b5e;
+        }
+
+        .menu-btn{
+            display:none;
+            width:40px;
+            height:40px;
+            border:1px solid #eadbe2;
+            border-radius:10px;
+            background:#fff;
+            cursor:pointer;
+            font-size:20px;
+            color:#633e50;
+        }
+
+        /* =========================
+           MOBILE MENU
+        ========================= */
+
+        .mobile-menu{
+            display:none;
+            padding:8px 15px 15px;
+            background:#fffafc;
+        }
+
+        .mobile-menu.show{
+            display:block;
+        }
+
+        .mobile-menu a{
+            display:block;
+            padding:12px 7px;
+            border-bottom:1px solid #f1e2e8;
+            font-size:13px;
+            font-weight:600;
+        }
+
+        .mobile-menu .mobile-order{
+            margin-top:10px;
+            border:0;
+            text-align:center;
+            border-radius:30px;
+            background:#9e4e75;
+            color:#fff;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero{
+            width:min(1180px,calc(100% - 30px));
+            min-height:570px;
+            margin:auto;
+            display:grid;
+            grid-template-columns:1fr 1fr;
+            align-items:center;
+            gap:55px;
+            padding:65px 0;
+        }
+
+        .hero-small{
+            display:inline-block;
+            padding:8px 14px;
+            border-radius:30px;
+            background:#f8e9f0;
+            color:#9e4e75;
+            font-size:10px;
+            font-weight:bold;
+            letter-spacing:1px;
+        }
+
+        .hero h1{
+            margin-top:18px;
+            font-family:Georgia,serif;
+            font-size:clamp(42px,5vw,68px);
+            line-height:1.05;
+            color:#422d38;
+            letter-spacing:-2px;
+        }
+
+        .hero h1 span{
+            color:#a64f78;
+        }
+
+        .hero p{
+            max-width:500px;
+            margin-top:18px;
+            color:#806c75;
+            font-size:14px;
+            line-height:1.8;
+        }
+
+        .hero-buttons{
+            margin-top:28px;
+            display:flex;
+            flex-wrap:wrap;
+            gap:11px;
+        }
+
+        .primary-btn,
+        .secondary-btn{
+            min-height:47px;
+            padding:0 21px;
+            display:inline-flex;
+            align-items:center;
+            justify-content:center;
+            border-radius:30px;
+            font-size:12px;
+            font-weight:bold;
+        }
+
+        .primary-btn{
+            background:#9e4e75;
+            color:#fff;
+        }
+
+        .primary-btn:hover{
+            background:#813b5e;
+        }
+
+        .secondary-btn{
+            border:1px solid #dfcbd5;
+            background:#fff;
+            color:#674552;
+        }
+
+        .secondary-btn:hover{
+            background:#fdf0f5;
+        }
+
+        .hero-info{
+            margin-top:30px;
+            display:flex;
+            align-items:center;
+            gap:20px;
+        }
+
+        .hero-info strong{
+            display:block;
+            font-size:13px;
+        }
+
+        .hero-info small{
+            color:#927d86;
+            font-size:9px;
+        }
+
+        .info-line{
+            width:1px;
+            height:30px;
+            background:#e2d1d9;
+        }
+
+        /* =========================
+           HERO IMAGE
+        ========================= */
+
+        .hero-visual{
+            position:relative;
+            min-height:430px;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+
+        .hero-circle{
+            position:absolute;
+            width:390px;
+            height:390px;
+            border-radius:50%;
+            background:#f0dbe4;
+        }
+
+        .hero-image{
+            position:relative;
+            z-index:2;
+            width:350px;
+            height:430px;
+            border-radius:180px 180px 25px 25px;
+            overflow:hidden;
+            box-shadow:0 25px 55px rgba(70,35,52,.15);
+            border:8px solid #fff;
+        }
+
+        .hero-image img{
+            width:100%;
+            height:100%;
+            object-fit:cover;
+        }
+
+        .floating{
+            position:absolute;
+            z-index:5;
+            padding:12px 15px;
+            background:#fff;
+            border:1px solid #eadce3;
+            border-radius:14px;
+            box-shadow:0 12px 30px rgba(70,35,52,.12);
+            font-size:10px;
+            font-weight:bold;
+        }
+
+        .float-one{
+            top:65px;
+            left:0;
+        }
+
+        .float-two{
+            right:0;
+            bottom:65px;
+        }
+
+        /* =========================
+           SERVICES
+        ========================= */
+
+        .services{
+            background:#fff;
+            padding:75px 0;
+        }
+
+        .container{
+            width:min(1160px,calc(100% - 30px));
+            margin:auto;
+        }
+
+        .section-title{
+            text-align:center;
+            margin-bottom:38px;
+        }
+
+        .section-title small{
+            color:#a34e75;
+            font-size:10px;
+            font-weight:bold;
+            letter-spacing:1px;
+        }
+
+        .section-title h2{
+            margin-top:9px;
+            font-family:Georgia,serif;
+            font-size:clamp(30px,4vw,45px);
+            color:#432e39;
+        }
+
+        .section-title p{
+            max-width:590px;
+            margin:10px auto 0;
+            color:#8b747d;
+            font-size:12px;
+            line-height:1.7;
+        }
+
+        .service-grid{
+            display:grid;
+            grid-template-columns:repeat(4,1fr);
+            gap:17px;
+        }
+
+        .service-card{
+            padding:26px 17px;
+            text-align:center;
+            background:#fffafc;
+            border:1px solid #f0e0e7;
+            border-radius:18px;
+            transition:.25s;
+        }
+
+        .service-card:hover{
+            transform:translateY(-5px);
+            box-shadow:0 16px 35px rgba(70,35,52,.09);
+        }
+
+        .service-icon{
+            width:55px;
+            height:55px;
+            margin:0 auto 14px;
+            border-radius:50%;
+            background:#f6e5ed;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            font-size:25px;
+        }
+
+        .service-card h3{
+            font-size:14px;
+            color:#4b3440;
+        }
+
+        .service-card p{
+            margin-top:7px;
+            color:#907b83;
+            font-size:10px;
+            line-height:1.6;
+        }
+
+        /* =========================
+           COLLECTION
+        ========================= */
+
+        .collection{
+            padding:80px 0;
+            background:#fffafc;
+        }
+
+        .collection-grid{
+            display:grid;
+            grid-template-columns:repeat(3,1fr);
+            gap:20px;
+        }
+
+        .collection-card{
+            overflow:hidden;
+            border-radius:19px;
+            background:#fff;
+            border:1px solid #eedfe6;
+            transition:.25s;
+        }
+
+        .collection-card:hover{
+            transform:translateY(-4px);
+            box-shadow:0 15px 35px rgba(70,35,52,.09);
+        }
+
+        .collection-image{
+            height:300px;
+            overflow:hidden;
+        }
+
+        .collection-image img{
+            width:100%;
+            height:100%;
+            object-fit:cover;
+            transition:.35s;
+        }
+
+        .collection-card:hover img{
+            transform:scale(1.04);
+        }
+
+        .collection-info{
+            padding:16px;
+        }
+
+        .collection-info h3{
+            font-family:Georgia,serif;
+            font-size:17px;
+        }
+
+        .collection-info p{
+            margin-top:6px;
+            color:#927b84;
+            font-size:10px;
+            line-height:1.6;
+        }
+
+        .collection-link{
+            display:inline-block;
+            margin-top:11px;
+            color:#a04e75;
+            font-size:10px;
+            font-weight:bold;
+        }
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        .about{
+            padding:80px 0;
+            background:#fff;
+        }
+
+        .about-grid{
+            display:grid;
+            grid-template-columns:1fr 1fr;
+            gap:55px;
+            align-items:center;
+        }
+
+        .about-image{
+            height:420px;
+            overflow:hidden;
+            border-radius:25px;
+        }
+
+        .about-image img{
+            width:100%;
+            height:100%;
+            object-fit:cover;
+        }
+
+        .about-text small{
+            color:#a04e75;
+            font-size:10px;
+            font-weight:bold;
+            letter-spacing:1px;
+        }
+
+        .about-text h2{
+            margin-top:10px;
+            font-family:Georgia,serif;
+            font-size:clamp(32px,4vw,47px);
+            line-height:1.1;
+        }
+
+        .about-text h2 span{
+            color:#a04e75;
+        }
+
+        .about-text p{
+            margin-top:15px;
+            color:#846f78;
+            font-size:13px;
+            line-height:1.8;
+        }
+
+        /* =========================
+           WHY US
+        ========================= */
+
+        .why{
+            padding:75px 0;
+            background:#fdf1f6;
+        }
+
+        .why-grid{
+            display:grid;
+            grid-template-columns:repeat(4,1fr);
+            gap:16px;
+        }
+
+        .why-card{
+            padding:25px 14px;
+            text-align:center;
+            background:#fff;
+            border-radius:17px;
+            border:1px solid #eedfe6;
+        }
+
+        .why-card .icon{
+            font-size:27px;
+            margin-bottom:10px;
+        }
+
+        .why-card h3{
+            font-size:13px;
+        }
+
+        .why-card p{
+            margin-top:7px;
+            color:#907a83;
+            font-size:9px;
+            line-height:1.6;
+        }
+
+        /* =========================
+           ORDER
+        ========================= */
+
+        .order{
+            padding:80px 0;
+            background:#fff;
+        }
+
+        .order-box{
+            width:min(760px,100%);
+            margin:auto;
+            padding:27px;
+            background:#fffafc;
+            border:1px solid #eedfe6;
+            border-radius:20px;
+        }
+
+        .order-form{
+            display:grid;
+            grid-template-columns:1fr 1fr;
+            gap:14px;
+        }
+
+        .form-group{
+            display:flex;
+            flex-direction:column;
+            gap:6px;
+        }
+
+        .form-group.full{
+            grid-column:1/-1;
+        }
+
+        .form-group label{
+            font-size:10px;
+            font-weight:bold;
+            color:#624653;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea{
+            width:100%;
+            border:1px solid #e6d5de;
+            border-radius:9px;
+            background:#fff;
+            outline:none;
+            padding:11px;
+            color:#49343e;
+        }
+
+        .form-group input,
+        .form-group select{
+            height:43px;
+        }
+
+        .form-group textarea{
+            min-height:100px;
+            resize:vertical;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus{
+            border-color:#ad6284;
+        }
+
+        .submit-btn{
+            width:100%;
+            height:47px;
+            border:0;
+            border-radius:30px;
+            background:#9e4e75;
+            color:#fff;
+            font-size:12px;
+            font-weight:bold;
+            cursor:pointer;
+        }
+
+        .submit-btn:hover{
+            background:#813b5e;
+        }
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        .contact{
+            padding:75px 15px;
+            text-align:center;
+            background:#f8e7ef;
+        }
+
+        .contact h2{
+            margin-top:9px;
+            font-family:Georgia,serif;
+            font-size:clamp(30px,4vw,44px);
+        }
+
+        .contact p{
+            max-width:550px;
+            margin:10px auto;
+            color:#846d77;
+            font-size:12px;
+            line-height:1.7;
+        }
+
+        .contact-buttons{
+            display:flex;
+            justify-content:center;
+            flex-wrap:wrap;
+            gap:10px;
+            margin-top:20px;
+        }
+
+        .contact-btn{
+            padding:12px 18px;
+            border-radius:30px;
+            background:#fff;
+            border:1px solid #e4d2dc;
+            font-size:11px;
+            font-weight:bold;
+        }
+
+        .contact-btn:hover{
+            background:#fff7fa;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer{
+            padding:23px 15px;
+            background:#3c2933;
+            color:#eadde3;
+        }
+
+        .footer-inner{
+            width:min(1160px,100%);
+            margin:auto;
+            display:flex;
+            justify-content:space-between;
+            gap:15px;
+            font-size:10px;
+        }
+
+        /* =========================
+           TABLET
+        ========================= */
+
+        @media(max-width:950px){
+
+            .nav-links{
+                gap:14px;
+            }
+
+            .nav-links a{
+                font-size:10px;
+            }
+
+            .service-grid{
+                grid-template-columns:repeat(2,1fr);
+            }
+
+            .why-grid{
+                grid-template-columns:repeat(2,1fr);
+            }
+
+            .hero{
+                gap:25px;
+            }
+
+            .hero-circle{
+                width:310px;
+                height:310px;
+            }
+
+            .hero-image{
+                width:290px;
+                height:370px;
+            }
+        }
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media(max-width:720px){
+
+            .navbar{
+                width:calc(100% - 20px);
+                min-height:64px;
+                gap:8px;
+            }
+
+            .logo-mark{
+                width:38px;
+                height:38px;
+                font-size:17px;
+            }
+
+            .logo-text{
+                font-size:16px;
+            }
+
+            .nav-links,
+            .header-btn{
+                display:none;
+            }
+
+            .menu-btn{
+                display:flex;
+                align-items:center;
+                justify-content:center;
+                margin-left:auto;
+            }
+
+            /* HERO */
+
+            .hero{
+                width:calc(100% - 22px);
+                grid-template-columns:1fr;
+                text-align:center;
+                padding:48px 0 55px;
+                min-height:auto;
+                gap:35px;
+            }
+
+            .hero p{
+                margin-left:auto;
+                margin-right:auto;
+                font-size:12px;
+            }
+
+            .hero-buttons{
+                flex-direction:column;
+            }
+
+            .primary-btn,
+            .secondary-btn{
+                width:100%;
+            }
+
+            .hero-info{
+                justify-content:center;
+            }
+
+            .hero-visual{
+                min-height:350px;
+            }
+
+            .hero-circle{
+                width:270px;
+                height:270px;
+            }
+
+            .hero-image{
+                width:255px;
+                height:330px;
+            }
+
+            .floating{
+                transform:scale(.8);
+            }
+
+            .float-one{
+                left:-5px;
+                top:35px;
+            }
+
+            .float-two{
+                right:-5px;
+                bottom:35px;
+            }
+
+            /* SECTIONS */
+
+            .services,
+            .collection,
+            .about,
+            .why,
+            .order{
+                padding:60px 0;
+            }
+
+            .container{
+                width:calc(100% - 22px);
+            }
+
+            /* SERVICES */
+
+            .service-grid{
+                grid-template-columns:1fr 1fr;
+                gap:9px;
+            }
+
+            .service-card{
+                padding:20px 9px;
+            }
+
+            .service-card h3{
+                font-size:11px;
+            }
+
+            .service-card p{
+                font-size:8px;
+            }
+
+            /* COLLECTION */
+
+            .collection-grid{
+                grid-template-columns:1fr;
+                gap:15px;
+            }
+
+            .collection-image{
+                height:280px;
+            }
+
+            /* ABOUT */
+
+            .about-grid{
+                grid-template-columns:1fr;
+                gap:28px;
+                text-align:center;
+            }
+
+            .about-image{
+                height:300px;
+            }
+
+            /* WHY */
+
+            .why-grid{
+                grid-template-columns:1fr 1fr;
+                gap:9px;
+            }
+
+            .why-card{
+                padding:20px 8px;
+            }
+
+            .why-card h3{
+                font-size:10px;
+            }
+
+            .why-card p{
+                font-size:8px;
+            }
+
+            /* ORDER */
+
+            .order-box{
+                width:calc(100% - 22px);
+                padding:18px 13px;
+            }
+
+            .order-form{
+                grid-template-columns:1fr;
+            }
+
+            .form-group.full{
+                grid-column:auto;
+            }
+
+            /* CONTACT */
+
+            .contact-buttons{
+                flex-direction:column;
+                align-items:stretch;
+            }
+
+            .contact-btn{
+                width:100%;
+            }
+
+            /* FOOTER */
+
+            .footer-inner{
+                flex-direction:column;
+                align-items:center;
+            }
+        }
+
+        @media(max-width:390px){
+
+            .logo-text{
+                font-size:14px;
+            }
+
+            .hero h1{
+                font-size:39px;
+            }
+
+            .hero-circle{
+                width:245px;
+                height:245px;
+            }
+
+            .hero-image{
+                width:230px;
+                height:305px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+    <div class="navbar">
+
+        <a href="#home" class="logo">
+
+            <!-- পরে এখানে আপনার logo বসবে -->
+            <div class="logo-mark">🧵</div>
+
+            <div class="logo-text">
+                Anjona Ladies Tailors
+            </div>
+
+        </a>
+
+
+        <nav class="nav-links">
+
+            <a href="#home">Home</a>
+
+            <a href="#services">Services</a>
+
+            <a href="#collection">Collection</a>
+
+            <a href="#about">About</a>
+
+            <a href="#why">Why Us</a>
+
+            <a href="#contact">Contact</a>
+
+        </nav>
+
+
+        <a href="#order" class="header-btn">
+            Book Now
+        </a>
+
+
+        <button
+            class="menu-btn"
+            id="menuButton"
+            type="button"
+        >
+            ☰
+        </button>
+
+    </div>
+
+
+    <!-- MOBILE MENU -->
+
+    <div class="mobile-menu" id="mobileMenu">
+
+        <a href="#home">Home</a>
+
+        <a href="#services">Services</a>
+
+        <a href="#collection">Collection</a>
+
+        <a href="#about">About</a>
+
+        <a href="#why">Why Us</a>
+
+        <a href="#contact">Contact</a>
+
+        <a href="#order" class="mobile-order">
+            Book Your Order
+        </a>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero" id="home">
+
+
+    <div class="hero-content">
+
+        <span class="hero-small">
+            ✂️ LADIES TAILORING • CUSTOM DESIGN
+        </span>
+
+
+        <h1>
+            Your style,
+            <span>our craftsmanship.</span>
+        </h1>
+
+
+        <p>
+            Beautifully stitched ladies dresses made
+            specially for you. From simple everyday
+            outfits to elegant party wear, we bring
+            your ideas to life.
+        </p>
+
+
+        <div class="hero-buttons">
+
+            <a
+                href="#order"
+                class="primary-btn"
+            >
+                Book Your Stitching →
+            </a>
+
+            <a
+                href="#collection"
+                class="secondary-btn"
+            >
+                View Collection
+            </a>
+
+        </div>
+
+
+        <div class="hero-info">
+
+            <div>
+                <strong>Perfect Fit</strong>
+                <small>Made for you</small>
+            </div>
+
+            <div class="info-line"></div>
+
+            <div>
+                <strong>Custom Design</strong>
+                <small>Your choice</small>
+            </div>
+
+            <div class="info-line"></div>
+
+            <div>
+                <strong>Fine Stitching</strong>
+                <small>Carefully made</small>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- HERO IMAGE -->
+
+    <div class="hero-visual">
+
+        <div class="hero-circle"></div>
+
+
+        <div class="hero-image">
+
+            <img
+                src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=900&q=85"
+                alt="Ladies Fashion Dress"
+            >
+
+        </div>
+
+
+        <div class="floating float-one">
+            ✨ Perfect Fit
+        </div>
+
+        <div class="floating float-two">
+            🧵 Custom Stitching
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     SERVICES
+========================= -->
+
+<section class="services" id="services">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <small>
+                OUR SERVICES
+            </small>
+
+            <h2>
+                Tailoring For Every Style
+            </h2>
+
+            <p>
+                We carefully stitch and customize
+                outfits according to your size,
+                style and preference.
+            </p>
+
+        </div>
+
+
+        <div class="service-grid">
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    👗
+                </div>
+
+                <h3>
+                    Salwar Kameez
+                </h3>
+
+                <p>
+                    Beautiful custom stitching
+                    with a perfect fit.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    🧵
+                </div>
+
+                <h3>
+                    Blouse Stitching
+                </h3>
+
+                <p>
+                    Stylish blouse designs
+                    made to your measurement.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    ✨
+                </div>
+
+                <h3>
+                    Party Wear
+                </h3>
+
+                <p>
+                    Elegant outfits for
+                    special occasions.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    🌸
+                </div>
+
+                <h3>
+                    Custom Design
+                </h3>
+
+                <p>
+                    Bring your design and
+                    we'll stitch it for you.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     COLLECTION
+========================= -->
+
+<section class="collection" id="collection">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <small>
+                OUR COLLECTION
+            </small>
+
+            <h2>
+                Styles You Will Love
+            </h2>
+
+            <p>
+                Explore some of the styles
+                you can customize with us.
+            </p>
+
+        </div>
+
+
+        <div class="collection-grid">
+
+
+            <div class="collection-card">
+
+                <div class="collection-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=800&q=85"
+                        alt="Traditional Dress"
+                        loading="lazy"
+                    >
+
+                </div>
+
+                <div class="collection-info">
+
+                    <h3>
+                        Traditional Wear
+                    </h3>
+
+                    <p>
+                        Elegant traditional outfits
+                        with beautiful finishing.
+                    </p>
+
+                    <a
+                        href="#order"
+                        class="collection-link"
+                    >
+                        Order This Style →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="collection-card">
+
+                <div class="collection-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1583391733956-6c78276477e2?auto=format&fit=crop&w=800&q=85"
+                        alt="Ladies Fashion"
+                        loading="lazy"
+                    >
+
+                </div>
+
+                <div class="collection-info">
+
+                    <h3>
+                        Modern Ladies Wear
+                    </h3>
+
+                    <p>
+                        Modern cuts and comfortable
+                        custom tailoring.
+                    </p>
+
+                    <a
+                        href="#order"
+                        class="collection-link"
+                    >
+                        Order This Style →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="collection-card">
+
+                <div class="collection-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1597983073493-88cd35cf93e8?auto=format&fit=crop&w=800&q=85"
+                        alt="Party Dress"
+                        loading="lazy"
+                    >
+
+                </div>
+
+                <div class="collection-info">
+
+                    <h3>
+                        Party & Occasion
+                    </h3>
+
+                    <p>
+                        Special outfits designed
+                        for your memorable days.
+                    </p>
+
+                    <a
+                        href="#order"
+                        class="collection-link"
+                    >
+                        Order This Style →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section class="about" id="about">
+
+    <div class="container about-grid">
+
+
+        <div class="about-image">
+
+            <img
+                src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1000&q=85"
+                alt="Ladies Tailoring"
+                loading="lazy"
+            >
+
+        </div>
+
+
+        <div class="about-text">
+
+            <small>
+                ABOUT ANJONA LADIES TAILORS
+            </small>
+
+            <h2>
+                Stitching with
+                <span>care & passion.</span>
+            </h2>
+
+            <p>
+                At Anjona Ladies Tailors, we believe
+                every woman has her own unique style.
+                That's why every dress is stitched
+                with attention to detail.
+            </p>
+
+            <p>
+                Whether you have a reference design
+                or your own idea, we work to create
+                an outfit that feels comfortable,
+                beautiful and uniquely yours.
+            </p>
+
+            <a
+                href="#order"
+                class="primary-btn"
+                style="margin-top:22px;"
+            >
+                Talk About Your Design →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     WHY US
+========================= -->
+
+<section class="why" id="why">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <small>
+                WHY CHOOSE US
+            </small>
+
+            <h2>
+                Made For You
+            </h2>
+
+        </div>
+
+
+        <div class="why-grid">
+
+
+            <div class="why-card">
+
+                <div class="icon">
+                    📏
+                </div>
+
+                <h3>
+                    Perfect Measurement
+                </h3>
+
+                <p>
+                    Carefully made according
+                    to your measurements.
+                </p>
+
+            </div>
+
+
+            <div class="why-card">
+
+                <div class="icon">
+                    🧵
+                </div>
+
+                <h3>
+                    Quality Stitching
+                </h3>
+
+                <p>
+                    Neat stitching and
+                    careful finishing.
+                </p>
+
+            </div>
+
+
+            <div class="why-card">
+
+                <div class="icon">
+                    🎨
+                </div>
+
+                <h3>
+                    Custom Designs
+                </h3>
+
+                <p>
+                    Your design, your fabric,
+                    your choice.
+                </p>
+
+            </div>
+
+
+            <div class="why-card">
+
+                <div class="icon">
+                    ❤️
+                </div>
+
+                <h3>
+                    Personal Care
+                </h3>
+
+                <p>
+                    Every order receives
+                    special attention.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     ORDER
+========================= -->
+
+<section class="order" id="order">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <small>
+                BOOK YOUR ORDER
+            </small>
+
+            <h2>
+                Tell Us What You Need
+            </h2>
+
+            <p>
+                Fill out the form and send
+                your request directly.
+            </p>
+
+        </div>
+
+
+        <div class="order-box">
+
+            <form id="orderForm" class="order-form">
+
+
+                <div class="form-group">
+
+                    <label>
+                        Your Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="customerName"
+                        placeholder="Your name"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Phone Number
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="customerPhone"
+                        placeholder="01XXXXXXXXX"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Service
+                    </label>
+
+                    <select id="serviceName" required>
+
+                        <option value="">
+                            Select service
+                        </option>
+
+                        <option>
+                            Salwar Kameez
+                        </option>
+
+                        <option>
+                            Blouse Stitching
+                        </option>
+
+                        <option>
+                            Party Wear
+                        </option>
+
+                        <option>
+                            Custom Design
+                        </option>
+
+                        <option>
+                            Other
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Delivery / Required Date
+                    </label>
+
+                    <input
+                        type="date"
+                        id="deliveryDate"
+                    >
+
+                </div>
+
+
+                <div class="form-group full">
+
+                    <label>
+                        Your Design / Details
+                    </label>
+
+                    <textarea
+                        id="orderDetails"
+                        placeholder="Tell us about your dress, design, fabric, measurement or any special request..."
+                    ></textarea>
+
+                </div>
+
+
+                <div class="form-group full">
+
+                    <button
+                        type="submit"
+                        class="submit-btn"
+                    >
+                        Send Order Request →
+                    </button>
+
+                </div>
+
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section class="contact" id="contact">
+
+    <div class="section-title">
+
+        <small>
+            CONTACT US
+        </small>
+
+        <h2>
+            Let's Create Your Style
+        </h2>
+
+        <p>
+            Have a design in mind?
+            Contact Anjona Ladies Tailors
+            and let's discuss your order.
+        </p>
+
+    </div>
+
+
+    <div class="contact-buttons">
+
+        <a
+            href="https://wa.me/8801717503093"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="contact-btn"
+        >
+            📱 WhatsApp Us
+        </a>
+
+
+        <a
+            href="tel:+8801717503093"
+            class="contact-btn"
+        >
+            ☎️ Call Now
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div class="footer-inner">
+
+        <span>
+            © 2026 Anjona Ladies Tailors
+        </span>
+
+        <span>
+            Crafted with ❤️ & 🧵
+        </span>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+
+    /* =========================
+       MOBILE MENU
+    ========================= */
+
+    const menuButton =
+        document.getElementById("menuButton");
+
+    const mobileMenu =
+        document.getElementById("mobileMenu");
+
+
+    menuButton.addEventListener("click", function(){
+
+        mobileMenu.classList.toggle("show");
+
+        if(mobileMenu.classList.contains("show")){
+            menuButton.textContent = "✕";
+        }else{
+            menuButton.textContent = "☰";
+        }
+
+    });
+
+
+    /* CLOSE MOBILE MENU */
+
+    document
+    .querySelectorAll(".mobile-menu a")
+    .forEach(function(link){
+
+        link.addEventListener("click", function(){
+
+            mobileMenu.classList.remove("show");
+
+            menuButton.textContent = "☰";
+
+        });
+
+    });
+
+
+
+    /* =========================
+       ORDER FORM
+    ========================= */
+
+    const orderForm =
+        document.getElementById("orderForm");
+
+
+    orderForm.addEventListener("submit", function(event){
+
+        event.preventDefault();
+
+
+        const name =
+            document
+            .getElementById("customerName")
+            .value
+            .trim();
+
+
+        const phone =
+            document
+            .getElementById("customerPhone")
+            .value
+            .trim();
+
+
+        const service =
+            document
+            .getElementById("serviceName")
+            .value;
+
+
+        const date =
+            document
+            .getElementById("deliveryDate")
+            .value;
+
+
+        const details =
+            document
+            .getElementById("orderDetails")
+            .value
+            .trim();
+
+
+        /* VALIDATION */
+
+        if(!name){
+
+            alert("Please enter your name.");
+
+            document
+            .getElementById("customerName")
+            .focus();
+
+            return;
+
+        }
+
+
+        if(!phone){
+
+            alert("Please enter your phone number.");
+
+            document
+            .getElementById("customerPhone")
+            .focus();
+
+            return;
+
+        }
+
+
+        if(!service){
+
+            alert("Please select a service.");
+
+            document
+            .getElementById("serviceName")
+            .focus();
+
+            return;
+
+        }
+
+
+        /* =========================
+           WHATSAPP NUMBER
+        ========================= */
+
+        const businessNumber =
+            "8801717503093";
+
+
+        /* =========================
+           MESSAGE
+        ========================= */
+
+        let message =
+`Hello Anjona Ladies Tailors! 🧵
+
+I would like to make an order.
+
+👤 Name: ${name}
+
+📱 Phone: ${phone}
+
+✂️ Service: ${service}`;
+
+
+        if(date){
+
+            message +=
+`\n\n📅 Required Date: ${date}`;
+
+        }
+
+
+        if(details){
+
+            message +=
+`\n\n📝 Design / Details:
+${details}`;
+
+        }
+
+
+        message +=
+`\n\nThank you ❤️`;
+
+
+        /* =========================
+           WHATSAPP URL
+        ========================= */
+
+        const whatsappURL =
+            "https://wa.me/" +
+            businessNumber +
+            "?text=" +
+            encodeURIComponent(message);
+
+
+        window.open(
+            whatsappURL,
+            "_blank"
+        );
+
+    });
+
+
+    /* =========================
+       ESCAPE KEY
+    ========================= */
+
+    document.addEventListener("keydown", function(event){
+
+        if(event.key === "Escape"){
+
+            mobileMenu.classList.remove("show");
+
+            menuButton.textContent = "☰";
+
+        }
+
+    });
+
+</script>
+
+
+</body>
+</html>
