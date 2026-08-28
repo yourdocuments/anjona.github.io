@@ -4,10 +4,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Anjona Ladies Tailors</title>
+
+<title>Anjona Ladies Tailors | Fashion & Tailoring</title>
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root{
+    --black:#0b0b0b;
+    --dark:#111111;
+    --card:#171717;
+    --card2:#1d1d1d;
+    --yellow:#f5c542;
+    --yellow2:#ffd95a;
+    --white:#ffffff;
+    --text:#f3f3f3;
+    --muted:#a4a4a4;
+    --border:#292929;
+}
 
 *{
     margin:0;
@@ -18,271 +32,342 @@
 
 body{
     font-family:'Poppins',sans-serif;
-    background:#fffafc;
-    color:#29232a;
+    background:var(--black);
+    color:var(--text);
 }
 
 a{
-    text-decoration:none;
     color:inherit;
+    text-decoration:none;
+}
+
+button,
+input,
+textarea,
+select{
+    font-family:inherit;
 }
 
 button{
-    font-family:inherit;
     cursor:pointer;
 }
 
-/* TOP BAR */
-.topbar{
-    background:#281923;
-    color:white;
-    text-align:center;
-    padding:9px 15px;
-    font-size:13px;
+img{
+    display:block;
 }
 
-/* NAVBAR */
+/* ================= TOP BAR ================= */
+
+.topbar{
+    background:var(--yellow);
+    color:#111;
+    text-align:center;
+    padding:9px 15px;
+    font-size:12px;
+    font-weight:600;
+    letter-spacing:.5px;
+}
+
+/* ================= NAVBAR ================= */
+
 .navbar{
-    height:76px;
-    background:white;
+    height:78px;
+    padding:0 6%;
     display:flex;
     align-items:center;
     justify-content:space-between;
-    padding:0 6%;
+
     position:sticky;
     top:0;
     z-index:1000;
-    box-shadow:0 3px 18px rgba(0,0,0,.06);
+
+    background:rgba(11,11,11,.95);
+    border-bottom:1px solid var(--border);
+    backdrop-filter:blur(12px);
 }
 
 .logo{
     font-family:'Playfair Display',serif;
-    font-size:26px;
+    font-size:27px;
     font-weight:700;
-    color:#8d3159;
+    color:var(--yellow);
+    line-height:1;
 }
 
 .logo span{
     display:block;
+    color:#888;
     font-family:'Poppins',sans-serif;
-    font-size:9px;
-    letter-spacing:3px;
+    font-size:8px;
+    letter-spacing:4px;
     text-align:center;
-    color:#777;
+    margin-top:5px;
 }
 
 .nav-links{
     display:flex;
-    gap:30px;
     align-items:center;
+    gap:29px;
     list-style:none;
 }
 
 .nav-links a{
-    font-size:14px;
-    font-weight:500;
+    color:#ddd;
+    font-size:13px;
     transition:.3s;
 }
 
 .nav-links a:hover{
-    color:#a23868;
+    color:var(--yellow);
 }
 
 .nav-actions{
     display:flex;
-    gap:10px;
     align-items:center;
+    gap:9px;
 }
 
 .icon-btn{
     width:40px;
     height:40px;
-    border:1px solid #eee;
-    background:white;
     border-radius:50%;
+    border:1px solid var(--border);
+    background:var(--card);
+    color:white;
     font-size:17px;
+    transition:.3s;
+}
+
+.icon-btn:hover{
+    border-color:var(--yellow);
+    color:var(--yellow);
 }
 
 .menu-btn{
     display:none;
     border:0;
     background:none;
+    color:white;
     font-size:25px;
 }
 
-/* HERO */
+/* ================= HERO ================= */
+
 .hero{
-    min-height:600px;
+    min-height:650px;
     padding:70px 7%;
+
     display:flex;
     align-items:center;
+
     position:relative;
     overflow:hidden;
+
     background:
-        linear-gradient(90deg,rgba(255,249,251,.98) 0%,rgba(255,249,251,.88) 43%,rgba(255,249,251,.15) 100%),
-        url("https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=1800&q=85");
+        linear-gradient(
+            90deg,
+            rgba(8,8,8,.98) 0%,
+            rgba(8,8,8,.90) 43%,
+            rgba(8,8,8,.30) 100%
+        ),
+        url("https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=1800&q=90");
+
     background-size:cover;
     background-position:center;
 }
 
 .hero-content{
-    max-width:610px;
+    max-width:620px;
 }
 
 .small-title{
-    color:#a23868;
-    font-size:13px;
+    color:var(--yellow);
+    font-size:12px;
     font-weight:600;
     letter-spacing:3px;
-    text-transform:uppercase;
     margin-bottom:17px;
 }
 
 .hero h1{
     font-family:'Playfair Display',serif;
-    font-size:65px;
-    line-height:1.05;
+    font-size:68px;
+    line-height:1.02;
+    color:white;
     margin-bottom:22px;
 }
 
 .hero h1 span{
-    color:#a23868;
+    color:var(--yellow);
 }
 
 .hero p{
-    color:#665d63;
+    color:#bcbcbc;
     max-width:520px;
-    line-height:1.8;
+    font-size:14px;
+    line-height:1.9;
     margin-bottom:30px;
 }
 
 .hero-buttons{
     display:flex;
-    gap:13px;
+    gap:12px;
 }
 
 .primary-btn,
 .secondary-btn{
+    display:inline-block;
     padding:14px 25px;
-    border-radius:5px;
-    font-size:14px;
+    border-radius:4px;
+    font-size:13px;
     font-weight:600;
-    border:1px solid #a23868;
+    transition:.3s;
 }
 
 .primary-btn{
-    background:#a23868;
-    color:white;
-}
-
-.secondary-btn{
-    background:white;
-    color:#a23868;
+    background:var(--yellow);
+    color:#111;
+    border:1px solid var(--yellow);
 }
 
 .primary-btn:hover{
-    background:#7f284f;
+    background:var(--yellow2);
+    transform:translateY(-2px);
 }
 
-/* CATEGORY */
+.secondary-btn{
+    background:rgba(0,0,0,.45);
+    color:white;
+    border:1px solid #777;
+}
+
+.secondary-btn:hover{
+    border-color:var(--yellow);
+    color:var(--yellow);
+}
+
+/* ================= GENERAL SECTION ================= */
+
 .section{
-    padding:80px 7%;
+    padding:85px 7%;
 }
 
 .section-heading{
     text-align:center;
-    margin-bottom:42px;
+    margin-bottom:45px;
 }
 
 .section-heading .label{
-    color:#a23868;
-    font-size:12px;
+    color:var(--yellow);
+    font-size:11px;
     font-weight:600;
     letter-spacing:3px;
 }
 
 .section-heading h2{
     font-family:'Playfair Display',serif;
-    font-size:39px;
+    font-size:42px;
     margin-top:8px;
+    color:white;
 }
 
 .section-heading p{
-    color:#777;
-    font-size:14px;
-    margin-top:10px;
+    color:var(--muted);
+    font-size:13px;
+    margin-top:9px;
 }
+
+/* ================= CATEGORIES ================= */
 
 .categories{
     display:grid;
     grid-template-columns:repeat(5,1fr);
-    gap:18px;
+    gap:16px;
 }
 
 .category{
-    height:250px;
-    border-radius:8px;
+    height:260px;
+    border-radius:6px;
     overflow:hidden;
     position:relative;
-    background:#eee;
+    background:var(--card);
+    border:1px solid var(--border);
 }
 
 .category img{
     width:100%;
     height:100%;
     object-fit:cover;
+    opacity:.82;
     transition:.5s;
 }
 
 .category:hover img{
     transform:scale(1.08);
+    opacity:1;
 }
 
 .category-overlay{
     position:absolute;
     inset:0;
-    background:linear-gradient(transparent 40%,rgba(0,0,0,.72));
+
     display:flex;
     align-items:flex-end;
-    padding:22px;
-    color:white;
+
+    padding:20px;
+
+    background:
+        linear-gradient(
+            transparent 35%,
+            rgba(0,0,0,.9)
+        );
 }
 
 .category-overlay h3{
     font-family:'Playfair Display',serif;
-    font-size:23px;
+    font-size:22px;
+    color:white;
 }
 
-/* PRODUCTS */
+.category-overlay h3::after{
+    content:"";
+    display:block;
+    width:28px;
+    height:2px;
+    background:var(--yellow);
+    margin-top:6px;
+}
+
+/* ================= PRODUCTS ================= */
+
 .products{
-    background:#fff;
+    background:#101010;
 }
 
 .product-grid{
     display:grid;
     grid-template-columns:repeat(4,1fr);
-    gap:23px;
+    gap:20px;
 }
 
 .product{
-    background:white;
-    border:1px solid #eee;
-    border-radius:8px;
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:6px;
     overflow:hidden;
-    position:relative;
-    transition:.3s;
+    transition:.35s;
 }
 
 .product:hover{
-    transform:translateY(-5px);
-    box-shadow:0 15px 35px rgba(0,0,0,.08);
+    transform:translateY(-6px);
+    border-color:#444;
+    box-shadow:0 18px 45px rgba(0,0,0,.35);
 }
 
 .product-image{
-    height:300px;
+    height:315px;
     position:relative;
     overflow:hidden;
-    background:#f5f2f3;
+    background:#222;
 }
 
 .product-image img{
@@ -298,25 +383,35 @@ button{
 
 .badge{
     position:absolute;
-    left:12px;
     top:12px;
-    background:#a23868;
-    color:white;
-    padding:6px 10px;
+    left:12px;
+    z-index:2;
+
+    padding:5px 9px;
     border-radius:3px;
-    font-size:10px;
-    font-weight:600;
+
+    background:var(--yellow);
+    color:#111;
+
+    font-size:9px;
+    font-weight:700;
 }
 
 .heart{
     position:absolute;
     right:12px;
     top:12px;
-    width:34px;
-    height:34px;
-    border:0;
+    z-index:2;
+
+    width:35px;
+    height:35px;
+
+    border:1px solid #444;
     border-radius:50%;
-    background:white;
+
+    background:rgba(0,0,0,.7);
+    color:white;
+
     font-size:17px;
 }
 
@@ -325,57 +420,71 @@ button{
 }
 
 .product-info .type{
-    font-size:10px;
-    color:#999;
+    color:#777;
+    font-size:9px;
+    letter-spacing:1.5px;
     text-transform:uppercase;
-    letter-spacing:1px;
 }
 
 .product-info h3{
-    font-size:15px;
-    margin:6px 0 8px;
+    color:white;
+    font-size:14px;
+    margin:7px 0 9px;
 }
 
 .price{
-    color:#a23868;
+    color:var(--yellow);
     font-size:17px;
     font-weight:700;
 }
 
 .old-price{
-    color:#aaa;
+    color:#777;
+    font-size:11px;
     text-decoration:line-through;
-    font-size:12px;
     margin-left:5px;
 }
 
 .add-cart{
     width:100%;
-    margin-top:13px;
     padding:11px;
-    background:#29232a;
+
+    margin-top:14px;
+
+    background:transparent;
     color:white;
-    border:0;
-    border-radius:4px;
-    font-size:12px;
+
+    border:1px solid #555;
+    border-radius:3px;
+
+    font-size:11px;
+    transition:.3s;
 }
 
-/* TAILORING */
+.add-cart:hover{
+    background:var(--yellow);
+    border-color:var(--yellow);
+    color:#111;
+}
+
+/* ================= TAILORING ================= */
+
 .tailoring{
-    background:#f8eef3;
+    background:#0b0b0b;
 }
 
 .tailoring-wrap{
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:55px;
+    gap:60px;
     align-items:center;
 }
 
 .tailoring-image{
-    height:480px;
-    border-radius:8px;
+    height:490px;
     overflow:hidden;
+    border-radius:6px;
+    border:1px solid var(--border);
 }
 
 .tailoring-image img{
@@ -385,101 +494,128 @@ button{
 }
 
 .tailoring-content .label{
-    color:#a23868;
+    color:var(--yellow);
+    font-size:11px;
     letter-spacing:3px;
-    font-size:12px;
     font-weight:600;
 }
 
 .tailoring-content h2{
     font-family:'Playfair Display',serif;
-    font-size:43px;
-    margin:10px 0 18px;
+    color:white;
+    font-size:45px;
+    line-height:1.15;
+    margin:11px 0 18px;
 }
 
-.tailoring-content p{
-    color:#686168;
-    line-height:1.8;
-    font-size:14px;
+.tailoring-content > p{
+    color:#999;
+    font-size:13px;
+    line-height:1.9;
+    max-width:550px;
 }
 
 .services{
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:18px;
-    margin:28px 0;
+    gap:12px;
+    margin:27px 0;
 }
 
 .service{
-    background:white;
+    background:var(--card);
+    border:1px solid var(--border);
     padding:17px;
-    border-radius:6px;
+    border-radius:5px;
+}
+
+.service:hover{
+    border-color:#555;
 }
 
 .service-icon{
-    font-size:25px;
+    font-size:22px;
 }
 
 .service h4{
-    font-size:14px;
-    margin:7px 0 4px;
+    color:white;
+    font-size:13px;
+    margin:6px 0 4px;
 }
 
 .service p{
-    font-size:11px;
+    color:#888;
+    font-size:10px;
 }
 
-/* OFFER */
+/* ================= OFFER ================= */
+
 .offer{
     margin:0 7%;
-    min-height:280px;
-    border-radius:8px;
+    min-height:300px;
+
     padding:50px;
+
     display:flex;
     align-items:center;
     justify-content:space-between;
-    overflow:hidden;
+
+    border:1px solid #383838;
+    border-radius:6px;
+
     background:
-        linear-gradient(90deg,rgba(40,25,35,.95),rgba(40,25,35,.5)),
-        url("https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=1600&q=80");
+        linear-gradient(
+            90deg,
+            rgba(5,5,5,.95),
+            rgba(5,5,5,.55)
+        ),
+        url("https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=1600&q=90");
+
     background-size:cover;
     background-position:center;
-    color:white;
+}
+
+.offer .small-title{
+    color:var(--yellow);
 }
 
 .offer h2{
     font-family:'Playfair Display',serif;
-    font-size:42px;
+    color:white;
+    font-size:44px;
 }
 
 .offer p{
-    margin:10px 0 20px;
-    color:#eee;
+    color:#bbb;
+    margin:9px 0 22px;
+    font-size:13px;
 }
 
-/* REVIEWS */
+/* ================= REVIEWS ================= */
+
 .reviews{
     display:grid;
     grid-template-columns:repeat(3,1fr);
-    gap:22px;
+    gap:20px;
 }
 
 .review{
-    background:white;
-    border:1px solid #eee;
-    padding:28px;
-    border-radius:8px;
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:6px;
+    padding:27px;
 }
 
 .stars{
-    color:#c18432;
+    color:var(--yellow);
+    font-size:13px;
     margin-bottom:13px;
 }
 
-.review p{
-    font-size:13px;
-    line-height:1.8;
-    color:#666;
+.review > p{
+    color:#aaa;
+    font-size:12px;
+    line-height:1.9;
 }
 
 .customer{
@@ -493,44 +629,51 @@ button{
     width:40px;
     height:40px;
     border-radius:50%;
-    background:#f0d9e3;
+
     display:flex;
     align-items:center;
     justify-content:center;
-    color:#8d3159;
-    font-weight:600;
+
+    background:var(--yellow);
+    color:#111;
+    font-weight:700;
 }
 
 .customer strong{
-    font-size:13px;
+    display:block;
+    color:white;
+    font-size:12px;
 }
 
 .customer small{
-    display:block;
-    color:#999;
+    color:#777;
+    font-size:9px;
 }
 
-/* CONTACT */
+/* ================= CONTACT ================= */
+
 .contact{
-    background:#fff;
+    background:#101010;
 }
 
 .contact-box{
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:50px;
+    gap:55px;
 }
 
 .contact-info h2{
     font-family:'Playfair Display',serif;
-    font-size:40px;
-    margin-bottom:15px;
+    font-size:43px;
+    color:white;
+    margin:8px 0 15px;
 }
 
-.contact-info p{
-    color:#666;
-    line-height:1.8;
-    font-size:14px;
+.contact-info > p{
+    color:#999;
+    font-size:13px;
+    line-height:1.9;
+    max-width:520px;
 }
 
 .contact-details{
@@ -539,36 +682,79 @@ button{
 
 .contact-item{
     display:flex;
+    align-items:center;
     gap:14px;
     margin:18px 0;
-    font-size:14px;
+    color:#ccc;
+    font-size:12px;
 }
 
 .contact-icon{
-    width:38px;
-    height:38px;
-    border-radius:50%;
-    background:#f7e9ef;
+    width:40px;
+    height:40px;
+
     display:flex;
-    justify-content:center;
     align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:#1d1d1d;
+    border:1px solid #333;
+
+    font-size:17px;
 }
 
+.contact-item strong{
+    color:white;
+}
+
+.contact-item span{
+    color:#888;
+}
+
+/* FORM */
+
 .contact-form{
-    background:#faf7f8;
+    background:var(--card);
+    border:1px solid var(--border);
     padding:30px;
-    border-radius:8px;
+    border-radius:6px;
+}
+
+.contact-form h3{
+    font-family:'Playfair Display',serif;
+    color:white;
+    font-size:27px;
+    margin-bottom:20px;
 }
 
 .input{
     width:100%;
-    border:1px solid #e4dfe1;
-    background:white;
+
+    background:#101010;
+    color:white;
+
+    border:1px solid #333;
+    border-radius:3px;
+
     padding:13px;
-    margin-bottom:13px;
-    border-radius:4px;
+    margin-bottom:12px;
+
     outline:none;
-    font-family:inherit;
+    font-size:12px;
+}
+
+.input:focus{
+    border-color:var(--yellow);
+}
+
+.input::placeholder{
+    color:#666;
+}
+
+select.input{
+    color:#999;
 }
 
 textarea.input{
@@ -576,9 +762,11 @@ textarea.input{
     resize:none;
 }
 
-/* FOOTER */
+/* ================= FOOTER ================= */
+
 footer{
-    background:#281923;
+    background:#070707;
+    border-top:1px solid #222;
     color:white;
     padding:55px 7% 20px;
 }
@@ -591,49 +779,67 @@ footer{
 
 .footer-logo{
     font-family:'Playfair Display',serif;
-    font-size:27px;
+    font-size:28px;
+    color:var(--yellow);
 }
 
 .footer-col p{
-    color:#c9bec4;
-    font-size:12px;
-    line-height:1.8;
+    color:#777;
+    font-size:11px;
+    line-height:1.9;
     margin-top:12px;
 }
 
 .footer-col h4{
+    color:white;
+    font-size:13px;
     margin-bottom:15px;
-    font-size:14px;
 }
 
 .footer-col a{
     display:block;
-    color:#c9bec4;
-    font-size:12px;
+    color:#777;
+    font-size:11px;
     margin:10px 0;
+    transition:.3s;
+}
+
+.footer-col a:hover{
+    color:var(--yellow);
 }
 
 .footer-bottom{
-    border-top:1px solid #493a42;
+    border-top:1px solid #222;
     margin-top:40px;
     padding-top:18px;
+
     text-align:center;
-    color:#aaa;
-    font-size:11px;
+
+    color:#666;
+    font-size:10px;
 }
 
-/* CART */
+/* ================= CART ================= */
+
 .cart-panel{
     position:fixed;
-    right:-400px;
+
     top:0;
-    width:380px;
-    max-width:90%;
+    right:-420px;
+
+    width:390px;
+    max-width:92%;
     height:100vh;
-    background:white;
-    z-index:2000;
-    box-shadow:-10px 0 30px rgba(0,0,0,.15);
+
+    z-index:3000;
+
+    background:#111;
+    border-left:1px solid #333;
+
     padding:25px;
+
+    box-shadow:-15px 0 40px rgba(0,0,0,.6);
+
     transition:.4s;
 }
 
@@ -645,51 +851,126 @@ footer{
     display:flex;
     justify-content:space-between;
     align-items:center;
+
     padding-bottom:20px;
-    border-bottom:1px solid #eee;
+
+    border-bottom:1px solid #292929;
 }
 
 .cart-head h2{
     font-family:'Playfair Display',serif;
+    color:white;
 }
 
 .close-cart{
     border:0;
     background:none;
-    font-size:25px;
+    color:white;
+    font-size:26px;
 }
 
 .cart-items{
     padding-top:20px;
 }
 
+.cart-empty{
+    color:#666;
+    font-size:12px;
+}
+
 .cart-item{
     display:flex;
     justify-content:space-between;
-    gap:10px;
-    border-bottom:1px solid #eee;
-    padding:12px 0;
-    font-size:13px;
+
+    padding:13px 0;
+
+    border-bottom:1px solid #292929;
+
+    font-size:11px;
+}
+
+.cart-item strong{
+    color:white;
+}
+
+.cart-item span{
+    color:var(--yellow);
+}
+
+.remove{
+    border:0;
+    background:none;
+    color:#888;
+    font-size:18px;
 }
 
 .cart-total{
     position:absolute;
-    bottom:25px;
     left:25px;
     right:25px;
+    bottom:25px;
+
+    padding-top:20px;
+
+    border-top:1px solid #292929;
+}
+
+.cart-total strong{
+    color:white;
 }
 
 .checkout{
     width:100%;
     padding:14px;
-    background:#a23868;
-    color:white;
+
+    margin-top:13px;
+
+    background:var(--yellow);
+    color:#111;
+
     border:0;
-    margin-top:12px;
+    border-radius:3px;
+
+    font-weight:700;
+    font-size:12px;
 }
 
-/* RESPONSIVE */
-@media(max-width:1000px){
+.checkout:hover{
+    background:var(--yellow2);
+}
+
+/* ================= TOAST ================= */
+
+.toast{
+    position:fixed;
+    left:50%;
+    bottom:25px;
+
+    transform:translate(-50%,120px);
+
+    background:var(--yellow);
+    color:#111;
+
+    padding:13px 20px;
+
+    border-radius:4px;
+
+    font-size:12px;
+    font-weight:600;
+
+    z-index:5000;
+
+    transition:.35s;
+}
+
+.toast.show{
+    transform:translate(-50%,0);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:1050px){
+
     .categories{
         grid-template-columns:repeat(3,1fr);
     }
@@ -699,33 +980,45 @@ footer{
     }
 
     .hero h1{
-        font-size:52px;
-    }
-
-    .footer-grid{
-        grid-template-columns:1fr 1fr;
+        font-size:56px;
     }
 }
 
-@media(max-width:700px){
+@media(max-width:750px){
+
     .navbar{
         padding:0 5%;
     }
 
     .nav-links{
         display:none;
+
         position:absolute;
-        top:76px;
+        top:78px;
         left:0;
         right:0;
-        background:white;
+
+        background:#111;
+        border-bottom:1px solid #333;
+
         flex-direction:column;
-        padding:25px;
-        box-shadow:0 10px 20px rgba(0,0,0,.08);
+        gap:0;
+
+        padding:10px 0;
     }
 
     .nav-links.active{
         display:flex;
+    }
+
+    .nav-links li{
+        width:100%;
+        text-align:center;
+    }
+
+    .nav-links a{
+        display:block;
+        padding:13px;
     }
 
     .menu-btn{
@@ -734,32 +1027,38 @@ footer{
 
     .nav-actions{
         margin-left:auto;
-        margin-right:8px;
+        margin-right:7px;
     }
 
     .hero{
         min-height:650px;
         padding:50px 6%;
+
         background:
-            linear-gradient(rgba(255,249,251,.9),rgba(255,249,251,.88)),
-            url("https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=1200&q=80");
+            linear-gradient(
+                rgba(8,8,8,.88),
+                rgba(8,8,8,.90)
+            ),
+            url("https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=1200&q=85");
+
         background-size:cover;
     }
 
     .hero h1{
-        font-size:44px;
+        font-size:45px;
     }
 
     .hero-buttons{
         flex-direction:column;
+        align-items:flex-start;
     }
 
     .section{
-        padding:60px 5%;
+        padding:65px 5%;
     }
 
     .section-heading h2{
-        font-size:32px;
+        font-size:34px;
     }
 
     .categories{
@@ -776,11 +1075,7 @@ footer{
     }
 
     .product-image{
-        height:230px;
-    }
-
-    .product-info{
-        padding:13px;
+        height:235px;
     }
 
     .tailoring-wrap,
@@ -789,11 +1084,11 @@ footer{
     }
 
     .tailoring-image{
-        height:350px;
+        height:360px;
     }
 
     .tailoring-content h2{
-        font-size:34px;
+        font-size:36px;
     }
 
     .offer{
@@ -803,7 +1098,7 @@ footer{
     }
 
     .offer h2{
-        font-size:34px;
+        font-size:35px;
     }
 
     .reviews{
@@ -816,8 +1111,9 @@ footer{
 }
 
 @media(max-width:450px){
+
     .logo{
-        font-size:21px;
+        font-size:22px;
     }
 
     .nav-actions .icon-btn:first-child{
@@ -825,7 +1121,7 @@ footer{
     }
 
     .hero h1{
-        font-size:38px;
+        font-size:39px;
     }
 
     .categories{
@@ -840,8 +1136,12 @@ footer{
         height:190px;
     }
 
+    .product-info{
+        padding:12px;
+    }
+
     .product-info h3{
-        font-size:12px;
+        font-size:11px;
     }
 
     .price{
@@ -851,6 +1151,11 @@ footer{
     .footer-grid{
         grid-template-columns:1fr;
     }
+
+    .cart-panel{
+        width:100%;
+        max-width:100%;
+    }
 }
 </style>
 </head>
@@ -859,7 +1164,7 @@ footer{
 
 <!-- TOP BAR -->
 <div class="topbar">
-    ✨ New Collection Arrived — বিশেষ ছাড় চলছে
+    ✨ NEW COLLECTION 2026 — Special Offer Available
 </div>
 
 <!-- NAVBAR -->
@@ -879,18 +1184,31 @@ footer{
     </ul>
 
     <div class="nav-actions">
-        <button class="icon-btn">⌕</button>
-        <button class="icon-btn" onclick="openCart()">🛍</button>
-        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+        <button class="icon-btn" title="Search">
+            ⌕
+        </button>
+
+        <button class="icon-btn" onclick="openCart()" title="Cart">
+            🛍
+        </button>
+
+        <button class="menu-btn" onclick="toggleMenu()">
+            ☰
+        </button>
+
     </div>
 
 </nav>
 
 <!-- HERO -->
 <section class="hero" id="home">
+
     <div class="hero-content">
 
-        <div class="small-title">ANJONA LADIES TAILORS</div>
+        <div class="small-title">
+            ANJONA LADIES TAILORS
+        </div>
 
         <h1>
             Elegance<br>
@@ -898,135 +1216,301 @@ footer{
         </h1>
 
         <p>
-            সুন্দর ডিজাইনের থ্রি-পিস, উন্নতমানের কাপড় এবং
-            আপনার পছন্দ অনুযায়ী নিখুঁত লেডিস টেইলারিং—
-            সবকিছু এক জায়গায়।
+            Premium ladies fashion, beautiful three-piece collections
+            and professional tailoring — designed to make every woman
+            feel confident and elegant.
         </p>
 
         <div class="hero-buttons">
-            <a href="#products" class="primary-btn">Shop Collection →</a>
-            <a href="#tailoring" class="secondary-btn">Book Tailoring</a>
+
+            <a href="#products" class="primary-btn">
+                Shop Collection →
+            </a>
+
+            <a href="#tailoring" class="secondary-btn">
+                Book Tailoring
+            </a>
+
         </div>
 
     </div>
+
 </section>
 
-<!-- CATEGORIES -->
+<!-- COLLECTIONS -->
 <section class="section" id="categories">
 
     <div class="section-heading">
-        <div class="label">EXPLORE</div>
-        <h2>Our Collections</h2>
-        <p>আপনার পছন্দের ফ্যাশন কালেকশন বেছে নিন</p>
+
+        <div class="label">
+            EXPLORE
+        </div>
+
+        <h2>
+            Our Collections
+        </h2>
+
+        <p>
+            আপনার পছন্দের fashion collection বেছে নিন
+        </p>
+
     </div>
 
     <div class="categories">
 
         <div class="category">
-            <img src="https://images.unsplash.com/photo-1583391733956-6c78276477e2?auto=format&fit=crop&w=700&q=80">
-            <div class="category-overlay"><h3>Three Piece</h3></div>
+
+            <img src="https://images.unsplash.com/photo-1583391733956-6c78276477e2?auto=format&fit=crop&w=700&q=85">
+
+            <div class="category-overlay">
+                <h3>Three Piece</h3>
+            </div>
+
         </div>
 
         <div class="category">
-            <img src="https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=700&q=80">
-            <div class="category-overlay"><h3>Fabrics</h3></div>
+
+            <img src="https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=700&q=85">
+
+            <div class="category-overlay">
+                <h3>Fabrics</h3>
+            </div>
+
         </div>
 
         <div class="category">
-            <img src="https://images.unsplash.com/photo-1564257577054-5d3e6c8a2b1e?auto=format&fit=crop&w=700&q=80">
-            <div class="category-overlay"><h3>Kamiz</h3></div>
+
+            <img src="https://images.unsplash.com/photo-1564257577054-5d3e6c8a2b1e?auto=format&fit=crop&w=700&q=85">
+
+            <div class="category-overlay">
+                <h3>Kamiz</h3>
+            </div>
+
         </div>
 
         <div class="category">
-            <img src="https://images.unsplash.com/photo-1596755389378-c31d21fd1273?auto=format&fit=crop&w=700&q=80">
-            <div class="category-overlay"><h3>Orna</h3></div>
+
+            <img src="https://images.unsplash.com/photo-1596755389378-c31d21fd1273?auto=format&fit=crop&w=700&q=85">
+
+            <div class="category-overlay">
+                <h3>Orna</h3>
+            </div>
+
         </div>
 
         <div class="category">
-            <img src="https://images.unsplash.com/photo-1591369822096-ffd140ec948f?auto=format&fit=crop&w=700&q=80">
-            <div class="category-overlay"><h3>Tailoring</h3></div>
+
+            <img src="https://images.unsplash.com/photo-1591369822096-ffd140ec948f?auto=format&fit=crop&w=700&q=85">
+
+            <div class="category-overlay">
+                <h3>Tailoring</h3>
+            </div>
+
         </div>
 
     </div>
+
 </section>
 
 <!-- PRODUCTS -->
 <section class="section products" id="products">
 
     <div class="section-heading">
-        <div class="label">NEW ARRIVALS</div>
-        <h2>Trending Collection</h2>
-        <p>আমাদের নতুন ও জনপ্রিয় কালেকশন</p>
+
+        <div class="label">
+            NEW ARRIVALS
+        </div>
+
+        <h2>
+            Trending Collection
+        </h2>
+
+        <p>
+            Our latest premium ladies collection
+        </p>
+
     </div>
 
     <div class="product-grid">
 
-        <div class="product">
-            <div class="product-image">
-                <span class="badge">NEW</span>
-                <button class="heart">♡</button>
-                <img src="https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=700&q=80">
-            </div>
-            <div class="product-info">
-                <div class="type">Three Piece</div>
-                <h3>Elegant Printed Three Piece</h3>
-                <span class="price">৳ 1,450</span>
-                <span class="old-price">৳ 1,700</span>
-                <button class="add-cart" onclick="addToCart('Elegant Printed Three Piece',1450)">
-                    Add to Cart
-                </button>
-            </div>
-        </div>
+        <!-- PRODUCT 1 -->
 
         <div class="product">
+
             <div class="product-image">
-                <span class="badge">SALE</span>
-                <button class="heart">♡</button>
-                <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=700&q=80">
+
+                <span class="badge">
+                    NEW
+                </span>
+
+                <button class="heart">
+                    ♡
+                </button>
+
+                <img src="https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=700&q=85">
+
             </div>
+
             <div class="product-info">
-                <div class="type">Premium</div>
-                <h3>Premium Cotton Collection</h3>
-                <span class="price">৳ 1,250</span>
-                <span class="old-price">৳ 1,500</span>
-                <button class="add-cart" onclick="addToCart('Premium Cotton Collection',1250)">
+
+                <div class="type">
+                    THREE PIECE
+                </div>
+
+                <h3>
+                    Elegant Printed Three Piece
+                </h3>
+
+                <span class="price">
+                    ৳ 1,450
+                </span>
+
+                <span class="old-price">
+                    ৳ 1,700
+                </span>
+
+                <button
+                    class="add-cart"
+                    onclick="addToCart('Elegant Printed Three Piece',1450)"
+                >
                     Add to Cart
                 </button>
+
             </div>
+
         </div>
 
-        <div class="product">
-            <div class="product-image">
-                <button class="heart">♡</button>
-                <img src="https://images.unsplash.com/photo-1583391733956-6c78276477e2?auto=format&fit=crop&w=700&q=80">
-            </div>
-            <div class="product-info">
-                <div class="type">Embroidered</div>
-                <h3>Embroidered Festive Dress</h3>
-                <span class="price">৳ 2,250</span>
-                <button class="add-cart" onclick="addToCart('Embroidered Festive Dress',2250)">
-                    Add to Cart
-                </button>
-            </div>
-        </div>
+        <!-- PRODUCT 2 -->
 
         <div class="product">
+
             <div class="product-image">
-                <span class="badge">HOT</span>
-                <button class="heart">♡</button>
-                <img src="https://images.unsplash.com/photo-1596755389378-c31d21fd1273?auto=format&fit=crop&w=700&q=80">
+
+                <span class="badge">
+                    SALE
+                </span>
+
+                <button class="heart">
+                    ♡
+                </button>
+
+                <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=700&q=85">
+
             </div>
+
             <div class="product-info">
-                <div class="type">Unstitched</div>
-                <h3>Premium Lawn Three Piece</h3>
-                <span class="price">৳ 1,850</span>
-                <button class="add-cart" onclick="addToCart('Premium Lawn Three Piece',1850)">
+
+                <div class="type">
+                    PREMIUM
+                </div>
+
+                <h3>
+                    Premium Cotton Collection
+                </h3>
+
+                <span class="price">
+                    ৳ 1,250
+                </span>
+
+                <span class="old-price">
+                    ৳ 1,500
+                </span>
+
+                <button
+                    class="add-cart"
+                    onclick="addToCart('Premium Cotton Collection',1250)"
+                >
                     Add to Cart
                 </button>
+
             </div>
+
+        </div>
+
+        <!-- PRODUCT 3 -->
+
+        <div class="product">
+
+            <div class="product-image">
+
+                <button class="heart">
+                    ♡
+                </button>
+
+                <img src="https://images.unsplash.com/photo-1583391733956-6c78276477e2?auto=format&fit=crop&w=700&q=85">
+
+            </div>
+
+            <div class="product-info">
+
+                <div class="type">
+                    EMBROIDERED
+                </div>
+
+                <h3>
+                    Embroidered Festive Dress
+                </h3>
+
+                <span class="price">
+                    ৳ 2,250
+                </span>
+
+                <button
+                    class="add-cart"
+                    onclick="addToCart('Embroidered Festive Dress',2250)"
+                >
+                    Add to Cart
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- PRODUCT 4 -->
+
+        <div class="product">
+
+            <div class="product-image">
+
+                <span class="badge">
+                    HOT
+                </span>
+
+                <button class="heart">
+                    ♡
+                </button>
+
+                <img src="https://images.unsplash.com/photo-1596755389378-c31d21fd1273?auto=format&fit=crop&w=700&q=85">
+
+            </div>
+
+            <div class="product-info">
+
+                <div class="type">
+                    UNSTITCHED
+                </div>
+
+                <h3>
+                    Premium Lawn Three Piece
+                </h3>
+
+                <span class="price">
+                    ৳ 1,850
+                </span>
+
+                <button
+                    class="add-cart"
+                    onclick="addToCart('Premium Lawn Three Piece',1850)"
+                >
+                    Add to Cart
+                </button>
+
+            </div>
+
         </div>
 
     </div>
+
 </section>
 
 <!-- TAILORING -->
@@ -1035,67 +1519,128 @@ footer{
     <div class="tailoring-wrap">
 
         <div class="tailoring-image">
+
             <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1000&q=85">
+
         </div>
 
         <div class="tailoring-content">
 
-            <div class="label">OUR TAILORING SERVICE</div>
+            <div class="label">
+                OUR TAILORING SERVICE
+            </div>
 
-            <h2>Perfect Fit,<br>Made For You</h2>
+            <h2>
+                Perfect Fit,<br>
+                Made For You
+            </h2>
 
             <p>
-                আপনার পছন্দের ডিজাইন ও মাপ অনুযায়ী
-                আমাদের অভিজ্ঞ টেইলাররা তৈরি করে দেবে
-                আপনার জন্য perfect outfit।
+                আপনার পছন্দের design এবং measurement অনুযায়ী
+                professional tailoring service। সুন্দর fitting,
+                clean stitching এবং custom design।
             </p>
 
             <div class="services">
 
                 <div class="service">
-                    <div class="service-icon">📏</div>
-                    <h4>Perfect Measurement</h4>
-                    <p>নিখুঁত মাপ নেওয়ার সুবিধা</p>
+
+                    <div class="service-icon">
+                        📏
+                    </div>
+
+                    <h4>
+                        Perfect Measurement
+                    </h4>
+
+                    <p>
+                        নিখুঁত মাপ নেওয়ার সুবিধা
+                    </p>
+
                 </div>
 
                 <div class="service">
-                    <div class="service-icon">✂️</div>
-                    <h4>Custom Design</h4>
-                    <p>আপনার পছন্দের ডিজাইন</p>
+
+                    <div class="service-icon">
+                        ✂️
+                    </div>
+
+                    <h4>
+                        Custom Design
+                    </h4>
+
+                    <p>
+                        আপনার পছন্দের ডিজাইন
+                    </p>
+
                 </div>
 
                 <div class="service">
-                    <div class="service-icon">🧵</div>
-                    <h4>Quality Stitching</h4>
-                    <p>দক্ষ কারিগরের সেলাই</p>
+
+                    <div class="service-icon">
+                        🧵
+                    </div>
+
+                    <h4>
+                        Quality Stitching
+                    </h4>
+
+                    <p>
+                        দক্ষ কারিগরের সেলাই
+                    </p>
+
                 </div>
 
                 <div class="service">
-                    <div class="service-icon">✨</div>
-                    <h4>Alteration</h4>
-                    <p>প্রয়োজনে মাপ পরিবর্তন</p>
+
+                    <div class="service-icon">
+                        ✨
+                    </div>
+
+                    <h4>
+                        Alteration
+                    </h4>
+
+                    <p>
+                        প্রয়োজন অনুযায়ী alteration
+                    </p>
+
                 </div>
 
             </div>
 
-            <a href="#contact" class="primary-btn">Book Your Tailoring</a>
+            <a href="#contact" class="primary-btn">
+                Book Your Tailoring
+            </a>
 
         </div>
 
     </div>
+
 </section>
 
 <!-- OFFER -->
 <div class="offer">
 
     <div>
-        <div class="small-title" style="color:#e7a4bf;">SPECIAL OFFER</div>
 
-        <h2>New Season<br>Collection</h2>
+        <div class="small-title">
+            SPECIAL OFFER
+        </div>
 
-        <p>নির্বাচিত কালেকশনে বিশেষ ছাড়</p>
+        <h2>
+            New Season<br>
+            Collection
+        </h2>
 
-        <a href="#products" class="primary-btn">Shop Now →</a>
+        <p>
+            নির্বাচিত কালেকশনে বিশেষ ছাড়
+        </p>
+
+        <a href="#products" class="primary-btn">
+            Shop Now →
+        </a>
+
     </div>
 
 </div>
@@ -1104,61 +1649,99 @@ footer{
 <section class="section">
 
     <div class="section-heading">
-        <div class="label">CUSTOMER LOVE</div>
-        <h2>What Our Customers Say</h2>
+
+        <div class="label">
+            CUSTOMER LOVE
+        </div>
+
+        <h2>
+            What Our Customers Say
+        </h2>
+
     </div>
 
     <div class="reviews">
 
         <div class="review">
-            <div class="stars">★★★★★</div>
+
+            <div class="stars">
+                ★★★★★
+            </div>
+
             <p>
-                “কাপড়ের quality অনেক ভালো। ডিজাইনও খুব সুন্দর।
-                টেইলারিং service-ও অনেক neat.”
+                “কাপড়ের quality অনেক ভালো। Design সুন্দর
+                এবং tailoring service-ও অনেক neat.”
             </p>
 
             <div class="customer">
-                <div class="avatar">S</div>
+
+                <div class="avatar">
+                    S
+                </div>
+
                 <div>
                     <strong>Sumaiya</strong>
                     <small>Happy Customer</small>
                 </div>
+
             </div>
+
         </div>
 
         <div class="review">
-            <div class="stars">★★★★★</div>
+
+            <div class="stars">
+                ★★★★★
+            </div>
+
             <p>
-                “নিজের পছন্দের ডিজাইন দিয়ে dress বানিয়েছি।
+                “নিজের পছন্দের design দিয়ে dress বানিয়েছি।
                 fitting একদম perfect হয়েছে।”
             </p>
 
             <div class="customer">
-                <div class="avatar">N</div>
+
+                <div class="avatar">
+                    N
+                </div>
+
                 <div>
                     <strong>Nusrat</strong>
                     <small>Happy Customer</small>
                 </div>
+
             </div>
+
         </div>
 
         <div class="review">
-            <div class="stars">★★★★★</div>
+
+            <div class="stars">
+                ★★★★★
+            </div>
+
             <p>
                 “Three piece collection অনেক সুন্দর।
                 আবার shopping করতে অবশ্যই আসব।”
             </p>
 
             <div class="customer">
-                <div class="avatar">R</div>
+
+                <div class="avatar">
+                    R
+                </div>
+
                 <div>
                     <strong>Raisa</strong>
                     <small>Happy Customer</small>
                 </div>
+
             </div>
+
         </div>
 
     </div>
+
 </section>
 
 <!-- CONTACT -->
@@ -1168,66 +1751,121 @@ footer{
 
         <div class="contact-info">
 
-            <div class="small-title">GET IN TOUCH</div>
+            <div class="small-title">
+                GET IN TOUCH
+            </div>
 
-            <h2>Visit Anjona</h2>
+            <h2>
+                Visit Anjona
+            </h2>
 
             <p>
-                আপনার পছন্দের কাপড়, থ্রি-পিস অথবা
-                tailoring service সম্পর্কে জানতে আমাদের সাথে যোগাযোগ করুন।
+                আপনার পছন্দের কাপড়, three piece অথবা
+                tailoring service সম্পর্কে জানতে আমাদের
+                সাথে যোগাযোগ করুন।
             </p>
 
             <div class="contact-details">
 
                 <div class="contact-item">
-                    <div class="contact-icon">📍</div>
+
+                    <div class="contact-icon">
+                        📍
+                    </div>
+
                     <div>
                         <strong>Shop Address</strong><br>
                         <span>Bangladesh</span>
                     </div>
+
                 </div>
 
                 <div class="contact-item">
-                    <div class="contact-icon">📞</div>
+
+                    <div class="contact-icon">
+                        📞
+                    </div>
+
                     <div>
                         <strong>Phone</strong><br>
                         <span>01XXXXXXXXX</span>
                     </div>
+
                 </div>
 
                 <div class="contact-item">
-                    <div class="contact-icon">🕐</div>
+
+                    <div class="contact-icon">
+                        🕐
+                    </div>
+
                     <div>
                         <strong>Opening Hours</strong><br>
                         <span>10:00 AM — 9:00 PM</span>
                     </div>
+
                 </div>
 
             </div>
 
         </div>
 
-        <form class="contact-form" onsubmit="sendMessage(event)">
+        <form
+            class="contact-form"
+            onsubmit="sendMessage(event)"
+        >
 
-            <h3 style="font-family:'Playfair Display',serif;font-size:27px;margin-bottom:20px;">
+            <h3>
                 Send a Message
             </h3>
 
-            <input class="input" type="text" placeholder="Your Name" required>
+            <input
+                class="input"
+                type="text"
+                placeholder="Your Name"
+                required
+            >
 
-            <input class="input" type="tel" placeholder="Phone Number" required>
+            <input
+                class="input"
+                type="tel"
+                placeholder="Phone Number"
+                required
+            >
 
             <select class="input">
-                <option>Select Service</option>
-                <option>Three Piece</option>
-                <option>Fabric</option>
-                <option>Tailoring</option>
-                <option>Alteration</option>
+
+                <option>
+                    Select Service
+                </option>
+
+                <option>
+                    Three Piece
+                </option>
+
+                <option>
+                    Fabric
+                </option>
+
+                <option>
+                    Tailoring
+                </option>
+
+                <option>
+                    Alteration
+                </option>
+
             </select>
 
-            <textarea class="input" placeholder="Your Message"></textarea>
+            <textarea
+                class="input"
+                placeholder="Your Message"
+            ></textarea>
 
-            <button class="primary-btn" type="submit">
+            <button
+                class="primary-btn"
+                type="submit"
+            >
                 Send Message
             </button>
 
@@ -1244,7 +1882,9 @@ footer{
 
         <div class="footer-col">
 
-            <div class="footer-logo">Anjona</div>
+            <div class="footer-logo">
+                Anjona
+            </div>
 
             <p>
                 LADIES TAILORS<br><br>
@@ -1255,26 +1895,71 @@ footer{
         </div>
 
         <div class="footer-col">
-            <h4>Shop</h4>
-            <a href="#products">Three Piece</a>
-            <a href="#products">New Collection</a>
-            <a href="#categories">Fabrics</a>
-            <a href="#categories">Kamiz</a>
+
+            <h4>
+                Shop
+            </h4>
+
+            <a href="#products">
+                Three Piece
+            </a>
+
+            <a href="#products">
+                New Collection
+            </a>
+
+            <a href="#categories">
+                Fabrics
+            </a>
+
+            <a href="#categories">
+                Kamiz
+            </a>
+
         </div>
 
         <div class="footer-col">
-            <h4>Services</h4>
-            <a href="#tailoring">Tailoring</a>
-            <a href="#tailoring">Custom Design</a>
-            <a href="#tailoring">Alteration</a>
+
+            <h4>
+                Services
+            </h4>
+
+            <a href="#tailoring">
+                Tailoring
+            </a>
+
+            <a href="#tailoring">
+                Custom Design
+            </a>
+
+            <a href="#tailoring">
+                Alteration
+            </a>
+
         </div>
 
         <div class="footer-col">
-            <h4>Contact</h4>
-            <a href="#">📞 01XXXXXXXXX</a>
-            <a href="#">💬 WhatsApp</a>
-            <a href="#">📘 Facebook</a>
-            <a href="#contact">📍 Location</a>
+
+            <h4>
+                Contact
+            </h4>
+
+            <a href="#">
+                📞 01XXXXXXXXX
+            </a>
+
+            <a href="#">
+                💬 WhatsApp
+            </a>
+
+            <a href="#">
+                📘 Facebook
+            </a>
+
+            <a href="#contact">
+                📍 Location
+            </a>
+
         </div>
 
     </div>
@@ -1285,44 +1970,93 @@ footer{
 
 </footer>
 
-<!-- CART PANEL -->
+<!-- CART -->
 <div class="cart-panel" id="cartPanel">
 
     <div class="cart-head">
-        <h2>Your Cart</h2>
-        <button class="close-cart" onclick="closeCart()">×</button>
+
+        <h2>
+            Your Cart
+        </h2>
+
+        <button
+            class="close-cart"
+            onclick="closeCart()"
+        >
+            ×
+        </button>
+
     </div>
 
-    <div class="cart-items" id="cartItems">
-        <p style="color:#999;font-size:13px;">Your cart is empty.</p>
+    <div
+        class="cart-items"
+        id="cartItems"
+    >
+        <p class="cart-empty">
+            Your cart is empty.
+        </p>
     </div>
 
     <div class="cart-total">
-        <strong>Total: ৳ <span id="cartTotal">0</span></strong>
-        <button class="checkout" onclick="checkout()">
+
+        <strong>
+            Total: ৳
+            <span id="cartTotal">
+                0
+            </span>
+        </strong>
+
+        <button
+            class="checkout"
+            onclick="checkout()"
+        >
             Proceed to Order
         </button>
+
     </div>
 
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast">
+    Added to cart ✓
 </div>
 
 <script>
 
 let cart = [];
 
+/* MOBILE MENU */
+
 function toggleMenu(){
-    document.getElementById("navLinks").classList.toggle("active");
+
+    document
+        .getElementById("navLinks")
+        .classList.toggle("active");
+
 }
 
+/* CART */
+
 function openCart(){
-    document.getElementById("cartPanel").classList.add("active");
+
+    document
+        .getElementById("cartPanel")
+        .classList.add("active");
+
 }
 
 function closeCart(){
-    document.getElementById("cartPanel").classList.remove("active");
+
+    document
+        .getElementById("cartPanel")
+        .classList.remove("active");
+
 }
 
-function addToCart(name, price){
+/* ADD PRODUCT */
+
+function addToCart(name,price){
 
     cart.push({
         name:name,
@@ -1331,113 +2065,181 @@ function addToCart(name, price){
 
     updateCart();
 
+    showToast("Added to cart ✓");
+
     openCart();
+
 }
+
+/* UPDATE CART */
 
 function updateCart(){
 
-    const container = document.getElementById("cartItems");
-    const totalElement = document.getElementById("cartTotal");
+    const container =
+        document.getElementById("cartItems");
+
+    const totalElement =
+        document.getElementById("cartTotal");
 
     if(cart.length === 0){
 
         container.innerHTML =
-        '<p style="color:#999;font-size:13px;">Your cart is empty.</p>';
+            '<p class="cart-empty">Your cart is empty.</p>';
 
         totalElement.innerText = "0";
+
         return;
     }
 
     let total = 0;
 
-    container.innerHTML = cart.map((item,index)=>{
+    container.innerHTML =
+        cart.map((item,index)=>{
 
-        total += item.price;
+            total += item.price;
 
-        return `
-        <div class="cart-item">
-            <div>
-                <strong>${item.name}</strong><br>
-                <span>৳ ${item.price.toLocaleString()}</span>
-            </div>
+            return `
+                <div class="cart-item">
 
-            <button
-                onclick="removeItem(${index})"
-                style="border:0;background:none;color:#a23868;">
-                ×
-            </button>
-        </div>
-        `;
+                    <div>
+                        <strong>
+                            ${item.name}
+                        </strong>
 
-    }).join("");
+                        <br>
 
-    totalElement.innerText = total.toLocaleString();
+                        <span>
+                            ৳ ${item.price.toLocaleString()}
+                        </span>
+                    </div>
+
+                    <button
+                        class="remove"
+                        onclick="removeItem(${index})"
+                    >
+                        ×
+                    </button>
+
+                </div>
+            `;
+
+        }).join("");
+
+    totalElement.innerText =
+        total.toLocaleString();
+
 }
+
+/* REMOVE */
 
 function removeItem(index){
 
     cart.splice(index,1);
 
     updateCart();
+
 }
+
+/* CHECKOUT */
 
 function checkout(){
 
     if(cart.length === 0){
 
-        alert("আপনার cart এখনো খালি।");
+        showToast("Your cart is empty");
 
         return;
     }
 
     alert(
-        "ধন্যবাদ! আপনার order request গ্রহণ করা হয়েছে।\n\n" +
-        "Anjona Ladies Tailors শীঘ্রই আপনার সাথে যোগাযোগ করবে।"
+        "Thank you for your order request!\n\n" +
+        "Anjona Ladies Tailors will contact you shortly."
     );
+
 }
+
+/* CONTACT */
 
 function sendMessage(event){
 
     event.preventDefault();
 
     alert(
-        "ধন্যবাদ! আপনার message পাঠানো হয়েছে।\n\n" +
-        "Anjona Ladies Tailors শীঘ্রই যোগাযোগ করবে।"
+        "Thank you!\n\n" +
+        "Your message has been submitted successfully."
     );
 
     event.target.reset();
+
 }
 
-/* HEART BUTTON */
+/* TOAST */
 
-document.querySelectorAll(".heart").forEach(button=>{
+function showToast(message){
 
-    button.addEventListener("click",function(){
+    const toast =
+        document.getElementById("toast");
 
-        if(this.innerText === "♡"){
-            this.innerText = "♥";
-            this.style.color = "#a23868";
-        }else{
-            this.innerText = "♡";
-            this.style.color = "";
-        }
+    toast.innerText = message;
+
+    toast.classList.add("show");
+
+    setTimeout(()=>{
+
+        toast.classList.remove("show");
+
+    },1800);
+
+}
+
+/* HEART */
+
+document
+    .querySelectorAll(".heart")
+    .forEach(button=>{
+
+        button.addEventListener(
+            "click",
+            function(){
+
+                if(this.innerText === "♡"){
+
+                    this.innerText = "♥";
+
+                    this.style.color =
+                        "#f5c542";
+
+                }else{
+
+                    this.innerText = "♡";
+
+                    this.style.color = "white";
+
+                }
+
+            }
+        );
 
     });
 
-});
+/* CLOSE MOBILE NAV */
 
-/* CLOSE MOBILE MENU */
+document
+    .querySelectorAll(".nav-links a")
+    .forEach(link=>{
 
-document.querySelectorAll(".nav-links a").forEach(link=>{
+        link.addEventListener(
+            "click",
+            function(){
 
-    link.addEventListener("click",function(){
+                document
+                    .getElementById("navLinks")
+                    .classList.remove("active");
 
-        document.getElementById("navLinks")
-        .classList.remove("active");
+            }
+        );
 
     });
-
-});
 
 </script>
 
