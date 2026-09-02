@@ -1,4 +1,3 @@
-```javascript
 /* =========================================================
    ANJONA LADIES TAILORS
    STEP 1.3 — COMPLETE SCRIPT.JS
