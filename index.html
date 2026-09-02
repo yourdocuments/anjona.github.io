@@ -1,2246 +1,879 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
 
-<title>Anjona Ladies Tailors | Fashion & Tailoring</title>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+  <meta
+    name="description"
+    content="Anjona Ladies Tailors — ladies tailoring, design, cutting and fabric services for local customers."
+  >
 
-:root{
-    --black:#0b0b0b;
-    --dark:#111111;
-    --card:#171717;
-    --card2:#1d1d1d;
-    --yellow:#f5c542;
-    --yellow2:#ffd95a;
-    --white:#ffffff;
-    --text:#f3f3f3;
-    --muted:#a4a4a4;
-    --border:#292929;
-}
+  <meta
+    name="keywords"
+    content="Anjona Ladies Tailors, Ladies Tailor, Tailoring, Design, Cutting, Fabrics, Anjona"
+  >
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    scroll-behavior:smooth;
-}
+  <meta name="theme-color" content="#8b5e34">
 
-body{
-    font-family:'Poppins',sans-serif;
-    background:var(--black);
-    color:var(--text);
-}
+  <title>Anjona Ladies Tailors | Ladies Tailoring & Design</title>
 
-a{
-    color:inherit;
-    text-decoration:none;
-}
-
-button,
-input,
-textarea,
-select{
-    font-family:inherit;
-}
-
-button{
-    cursor:pointer;
-}
-
-img{
-    display:block;
-}
-
-/* ================= TOP BAR ================= */
-
-.topbar{
-    background:var(--yellow);
-    color:#111;
-    text-align:center;
-    padding:9px 15px;
-    font-size:12px;
-    font-weight:600;
-    letter-spacing:.5px;
-}
-
-/* ================= NAVBAR ================= */
-
-.navbar{
-    height:78px;
-    padding:0 6%;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-
-    position:sticky;
-    top:0;
-    z-index:1000;
-
-    background:rgba(11,11,11,.95);
-    border-bottom:1px solid var(--border);
-    backdrop-filter:blur(12px);
-}
-
-.logo{
-    font-family:'Playfair Display',serif;
-    font-size:27px;
-    font-weight:700;
-    color:var(--yellow);
-    line-height:1;
-}
-
-.logo span{
-    display:block;
-    color:#888;
-    font-family:'Poppins',sans-serif;
-    font-size:8px;
-    letter-spacing:4px;
-    text-align:center;
-    margin-top:5px;
-}
-
-.nav-links{
-    display:flex;
-    align-items:center;
-    gap:29px;
-    list-style:none;
-}
-
-.nav-links a{
-    color:#ddd;
-    font-size:13px;
-    transition:.3s;
-}
-
-.nav-links a:hover{
-    color:var(--yellow);
-}
-
-.nav-actions{
-    display:flex;
-    align-items:center;
-    gap:9px;
-}
-
-.icon-btn{
-    width:40px;
-    height:40px;
-    border-radius:50%;
-    border:1px solid var(--border);
-    background:var(--card);
-    color:white;
-    font-size:17px;
-    transition:.3s;
-}
-
-.icon-btn:hover{
-    border-color:var(--yellow);
-    color:var(--yellow);
-}
-
-.menu-btn{
-    display:none;
-    border:0;
-    background:none;
-    color:white;
-    font-size:25px;
-}
-
-/* ================= HERO ================= */
-
-.hero{
-    min-height:650px;
-    padding:70px 7%;
-
-    display:flex;
-    align-items:center;
-
-    position:relative;
-    overflow:hidden;
-
-    background:
-        linear-gradient(
-            90deg,
-            rgba(8,8,8,.98) 0%,
-            rgba(8,8,8,.90) 43%,
-            rgba(8,8,8,.30) 100%
-        ),
-        url("https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=1800&q=90");
-
-    background-size:cover;
-    background-position:center;
-}
-
-.hero-content{
-    max-width:620px;
-}
-
-.small-title{
-    color:var(--yellow);
-    font-size:12px;
-    font-weight:600;
-    letter-spacing:3px;
-    margin-bottom:17px;
-}
-
-.hero h1{
-    font-family:'Playfair Display',serif;
-    font-size:68px;
-    line-height:1.02;
-    color:white;
-    margin-bottom:22px;
-}
-
-.hero h1 span{
-    color:var(--yellow);
-}
-
-.hero p{
-    color:#bcbcbc;
-    max-width:520px;
-    font-size:14px;
-    line-height:1.9;
-    margin-bottom:30px;
-}
-
-.hero-buttons{
-    display:flex;
-    gap:12px;
-}
-
-.primary-btn,
-.secondary-btn{
-    display:inline-block;
-    padding:14px 25px;
-    border-radius:4px;
-    font-size:13px;
-    font-weight:600;
-    transition:.3s;
-}
-
-.primary-btn{
-    background:var(--yellow);
-    color:#111;
-    border:1px solid var(--yellow);
-}
-
-.primary-btn:hover{
-    background:var(--yellow2);
-    transform:translateY(-2px);
-}
-
-.secondary-btn{
-    background:rgba(0,0,0,.45);
-    color:white;
-    border:1px solid #777;
-}
-
-.secondary-btn:hover{
-    border-color:var(--yellow);
-    color:var(--yellow);
-}
-
-/* ================= GENERAL SECTION ================= */
-
-.section{
-    padding:85px 7%;
-}
-
-.section-heading{
-    text-align:center;
-    margin-bottom:45px;
-}
-
-.section-heading .label{
-    color:var(--yellow);
-    font-size:11px;
-    font-weight:600;
-    letter-spacing:3px;
-}
-
-.section-heading h2{
-    font-family:'Playfair Display',serif;
-    font-size:42px;
-    margin-top:8px;
-    color:white;
-}
-
-.section-heading p{
-    color:var(--muted);
-    font-size:13px;
-    margin-top:9px;
-}
-
-/* ================= CATEGORIES ================= */
-
-.categories{
-    display:grid;
-    grid-template-columns:repeat(5,1fr);
-    gap:16px;
-}
-
-.category{
-    height:260px;
-    border-radius:6px;
-    overflow:hidden;
-    position:relative;
-    background:var(--card);
-    border:1px solid var(--border);
-}
-
-.category img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    opacity:.82;
-    transition:.5s;
-}
-
-.category:hover img{
-    transform:scale(1.08);
-    opacity:1;
-}
-
-.category-overlay{
-    position:absolute;
-    inset:0;
-
-    display:flex;
-    align-items:flex-end;
-
-    padding:20px;
-
-    background:
-        linear-gradient(
-            transparent 35%,
-            rgba(0,0,0,.9)
-        );
-}
-
-.category-overlay h3{
-    font-family:'Playfair Display',serif;
-    font-size:22px;
-    color:white;
-}
-
-.category-overlay h3::after{
-    content:"";
-    display:block;
-    width:28px;
-    height:2px;
-    background:var(--yellow);
-    margin-top:6px;
-}
-
-/* ================= PRODUCTS ================= */
-
-.products{
-    background:#101010;
-}
-
-.product-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:20px;
-}
-
-.product{
-    background:var(--card);
-    border:1px solid var(--border);
-    border-radius:6px;
-    overflow:hidden;
-    transition:.35s;
-}
-
-.product:hover{
-    transform:translateY(-6px);
-    border-color:#444;
-    box-shadow:0 18px 45px rgba(0,0,0,.35);
-}
-
-.product-image{
-    height:315px;
-    position:relative;
-    overflow:hidden;
-    background:#222;
-}
-
-.product-image img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    transition:.5s;
-}
-
-.product:hover .product-image img{
-    transform:scale(1.05);
-}
-
-.badge{
-    position:absolute;
-    top:12px;
-    left:12px;
-    z-index:2;
-
-    padding:5px 9px;
-    border-radius:3px;
-
-    background:var(--yellow);
-    color:#111;
-
-    font-size:9px;
-    font-weight:700;
-}
-
-.heart{
-    position:absolute;
-    right:12px;
-    top:12px;
-    z-index:2;
-
-    width:35px;
-    height:35px;
-
-    border:1px solid #444;
-    border-radius:50%;
-
-    background:rgba(0,0,0,.7);
-    color:white;
-
-    font-size:17px;
-}
-
-.product-info{
-    padding:18px;
-}
-
-.product-info .type{
-    color:#777;
-    font-size:9px;
-    letter-spacing:1.5px;
-    text-transform:uppercase;
-}
-
-.product-info h3{
-    color:white;
-    font-size:14px;
-    margin:7px 0 9px;
-}
-
-.price{
-    color:var(--yellow);
-    font-size:17px;
-    font-weight:700;
-}
-
-.old-price{
-    color:#777;
-    font-size:11px;
-    text-decoration:line-through;
-    margin-left:5px;
-}
-
-.add-cart{
-    width:100%;
-    padding:11px;
-
-    margin-top:14px;
-
-    background:transparent;
-    color:white;
-
-    border:1px solid #555;
-    border-radius:3px;
-
-    font-size:11px;
-    transition:.3s;
-}
-
-.add-cart:hover{
-    background:var(--yellow);
-    border-color:var(--yellow);
-    color:#111;
-}
-
-/* ================= TAILORING ================= */
-
-.tailoring{
-    background:#0b0b0b;
-}
-
-.tailoring-wrap{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:60px;
-    align-items:center;
-}
-
-.tailoring-image{
-    height:490px;
-    overflow:hidden;
-    border-radius:6px;
-    border:1px solid var(--border);
-}
-
-.tailoring-image img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-}
-
-.tailoring-content .label{
-    color:var(--yellow);
-    font-size:11px;
-    letter-spacing:3px;
-    font-weight:600;
-}
-
-.tailoring-content h2{
-    font-family:'Playfair Display',serif;
-    color:white;
-    font-size:45px;
-    line-height:1.15;
-    margin:11px 0 18px;
-}
-
-.tailoring-content > p{
-    color:#999;
-    font-size:13px;
-    line-height:1.9;
-    max-width:550px;
-}
-
-.services{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:12px;
-    margin:27px 0;
-}
-
-.service{
-    background:var(--card);
-    border:1px solid var(--border);
-    padding:17px;
-    border-radius:5px;
-}
-
-.service:hover{
-    border-color:#555;
-}
-
-.service-icon{
-    font-size:22px;
-}
-
-.service h4{
-    color:white;
-    font-size:13px;
-    margin:6px 0 4px;
-}
-
-.service p{
-    color:#888;
-    font-size:10px;
-}
-
-/* ================= OFFER ================= */
-
-.offer{
-    margin:0 7%;
-    min-height:300px;
-
-    padding:50px;
-
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-
-    border:1px solid #383838;
-    border-radius:6px;
-
-    background:
-        linear-gradient(
-            90deg,
-            rgba(5,5,5,.95),
-            rgba(5,5,5,.55)
-        ),
-        url("https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=1600&q=90");
-
-    background-size:cover;
-    background-position:center;
-}
-
-.offer .small-title{
-    color:var(--yellow);
-}
-
-.offer h2{
-    font-family:'Playfair Display',serif;
-    color:white;
-    font-size:44px;
-}
-
-.offer p{
-    color:#bbb;
-    margin:9px 0 22px;
-    font-size:13px;
-}
-
-/* ================= REVIEWS ================= */
-
-.reviews{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
-}
-
-.review{
-    background:var(--card);
-    border:1px solid var(--border);
-    border-radius:6px;
-    padding:27px;
-}
-
-.stars{
-    color:var(--yellow);
-    font-size:13px;
-    margin-bottom:13px;
-}
-
-.review > p{
-    color:#aaa;
-    font-size:12px;
-    line-height:1.9;
-}
-
-.customer{
-    display:flex;
-    align-items:center;
-    gap:12px;
-    margin-top:20px;
-}
-
-.avatar{
-    width:40px;
-    height:40px;
-    border-radius:50%;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    background:var(--yellow);
-    color:#111;
-    font-weight:700;
-}
-
-.customer strong{
-    display:block;
-    color:white;
-    font-size:12px;
-}
-
-.customer small{
-    color:#777;
-    font-size:9px;
-}
-
-/* ================= CONTACT ================= */
-
-.contact{
-    background:#101010;
-}
-
-.contact-box{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:55px;
-}
-
-.contact-info h2{
-    font-family:'Playfair Display',serif;
-    font-size:43px;
-    color:white;
-    margin:8px 0 15px;
-}
-
-.contact-info > p{
-    color:#999;
-    font-size:13px;
-    line-height:1.9;
-    max-width:520px;
-}
-
-.contact-details{
-    margin-top:25px;
-}
-
-.contact-item{
-    display:flex;
-    align-items:center;
-    gap:14px;
-    margin:18px 0;
-    color:#ccc;
-    font-size:12px;
-}
-
-.contact-icon{
-    width:40px;
-    height:40px;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    border-radius:50%;
-
-    background:#1d1d1d;
-    border:1px solid #333;
-
-    font-size:17px;
-}
-
-.contact-item strong{
-    color:white;
-}
-
-.contact-item span{
-    color:#888;
-}
-
-/* FORM */
-
-.contact-form{
-    background:var(--card);
-    border:1px solid var(--border);
-    padding:30px;
-    border-radius:6px;
-}
-
-.contact-form h3{
-    font-family:'Playfair Display',serif;
-    color:white;
-    font-size:27px;
-    margin-bottom:20px;
-}
-
-.input{
-    width:100%;
-
-    background:#101010;
-    color:white;
-
-    border:1px solid #333;
-    border-radius:3px;
-
-    padding:13px;
-    margin-bottom:12px;
-
-    outline:none;
-    font-size:12px;
-}
-
-.input:focus{
-    border-color:var(--yellow);
-}
-
-.input::placeholder{
-    color:#666;
-}
-
-select.input{
-    color:#999;
-}
-
-textarea.input{
-    height:110px;
-    resize:none;
-}
-
-/* ================= FOOTER ================= */
-
-footer{
-    background:#070707;
-    border-top:1px solid #222;
-    color:white;
-    padding:55px 7% 20px;
-}
-
-.footer-grid{
-    display:grid;
-    grid-template-columns:1.5fr 1fr 1fr 1fr;
-    gap:40px;
-}
-
-.footer-logo{
-    font-family:'Playfair Display',serif;
-    font-size:28px;
-    color:var(--yellow);
-}
-
-.footer-col p{
-    color:#777;
-    font-size:11px;
-    line-height:1.9;
-    margin-top:12px;
-}
-
-.footer-col h4{
-    color:white;
-    font-size:13px;
-    margin-bottom:15px;
-}
-
-.footer-col a{
-    display:block;
-    color:#777;
-    font-size:11px;
-    margin:10px 0;
-    transition:.3s;
-}
-
-.footer-col a:hover{
-    color:var(--yellow);
-}
-
-.footer-bottom{
-    border-top:1px solid #222;
-    margin-top:40px;
-    padding-top:18px;
-
-    text-align:center;
-
-    color:#666;
-    font-size:10px;
-}
-
-/* ================= CART ================= */
-
-.cart-panel{
-    position:fixed;
-
-    top:0;
-    right:-420px;
-
-    width:390px;
-    max-width:92%;
-    height:100vh;
-
-    z-index:3000;
-
-    background:#111;
-    border-left:1px solid #333;
-
-    padding:25px;
-
-    box-shadow:-15px 0 40px rgba(0,0,0,.6);
-
-    transition:.4s;
-}
-
-.cart-panel.active{
-    right:0;
-}
-
-.cart-head{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-
-    padding-bottom:20px;
-
-    border-bottom:1px solid #292929;
-}
-
-.cart-head h2{
-    font-family:'Playfair Display',serif;
-    color:white;
-}
-
-.close-cart{
-    border:0;
-    background:none;
-    color:white;
-    font-size:26px;
-}
-
-.cart-items{
-    padding-top:20px;
-}
-
-.cart-empty{
-    color:#666;
-    font-size:12px;
-}
-
-.cart-item{
-    display:flex;
-    justify-content:space-between;
-
-    padding:13px 0;
-
-    border-bottom:1px solid #292929;
-
-    font-size:11px;
-}
-
-.cart-item strong{
-    color:white;
-}
-
-.cart-item span{
-    color:var(--yellow);
-}
-
-.remove{
-    border:0;
-    background:none;
-    color:#888;
-    font-size:18px;
-}
-
-.cart-total{
-    position:absolute;
-    left:25px;
-    right:25px;
-    bottom:25px;
-
-    padding-top:20px;
-
-    border-top:1px solid #292929;
-}
-
-.cart-total strong{
-    color:white;
-}
-
-.checkout{
-    width:100%;
-    padding:14px;
-
-    margin-top:13px;
-
-    background:var(--yellow);
-    color:#111;
-
-    border:0;
-    border-radius:3px;
-
-    font-weight:700;
-    font-size:12px;
-}
-
-.checkout:hover{
-    background:var(--yellow2);
-}
-
-/* ================= TOAST ================= */
-
-.toast{
-    position:fixed;
-    left:50%;
-    bottom:25px;
-
-    transform:translate(-50%,120px);
-
-    background:var(--yellow);
-    color:#111;
-
-    padding:13px 20px;
-
-    border-radius:4px;
-
-    font-size:12px;
-    font-weight:600;
-
-    z-index:5000;
-
-    transition:.35s;
-}
-
-.toast.show{
-    transform:translate(-50%,0);
-}
-
-/* ================= RESPONSIVE ================= */
-
-@media(max-width:1050px){
-
-    .categories{
-        grid-template-columns:repeat(3,1fr);
-    }
-
-    .product-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .hero h1{
-        font-size:56px;
-    }
-}
-
-@media(max-width:750px){
-
-    .navbar{
-        padding:0 5%;
-    }
-
-    .nav-links{
-        display:none;
-
-        position:absolute;
-        top:78px;
-        left:0;
-        right:0;
-
-        background:#111;
-        border-bottom:1px solid #333;
-
-        flex-direction:column;
-        gap:0;
-
-        padding:10px 0;
-    }
-
-    .nav-links.active{
-        display:flex;
-    }
-
-    .nav-links li{
-        width:100%;
-        text-align:center;
-    }
-
-    .nav-links a{
-        display:block;
-        padding:13px;
-    }
-
-    .menu-btn{
-        display:block;
-    }
-
-    .nav-actions{
-        margin-left:auto;
-        margin-right:7px;
-    }
-
-    .hero{
-        min-height:650px;
-        padding:50px 6%;
-
-        background:
-            linear-gradient(
-                rgba(8,8,8,.88),
-                rgba(8,8,8,.90)
-            ),
-            url("https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=1200&q=85");
-
-        background-size:cover;
-    }
-
-    .hero h1{
-        font-size:45px;
-    }
-
-    .hero-buttons{
-        flex-direction:column;
-        align-items:flex-start;
-    }
-
-    .section{
-        padding:65px 5%;
-    }
-
-    .section-heading h2{
-        font-size:34px;
-    }
-
-    .categories{
-        grid-template-columns:1fr 1fr;
-    }
-
-    .category{
-        height:210px;
-    }
-
-    .product-grid{
-        grid-template-columns:1fr 1fr;
-        gap:12px;
-    }
-
-    .product-image{
-        height:235px;
-    }
-
-    .tailoring-wrap,
-    .contact-box{
-        grid-template-columns:1fr;
-    }
-
-    .tailoring-image{
-        height:360px;
-    }
-
-    .tailoring-content h2{
-        font-size:36px;
-    }
-
-    .offer{
-        margin:0 5%;
-        padding:35px 25px;
-        display:block;
-    }
-
-    .offer h2{
-        font-size:35px;
-    }
-
-    .reviews{
-        grid-template-columns:1fr;
-    }
-
-    .footer-grid{
-        grid-template-columns:1fr 1fr;
-    }
-}
-
-@media(max-width:450px){
-
-    .logo{
-        font-size:22px;
-    }
-
-    .nav-actions .icon-btn:first-child{
-        display:none;
-    }
-
-    .hero h1{
-        font-size:39px;
-    }
-
-    .categories{
-        grid-template-columns:1fr 1fr;
-    }
-
-    .product-grid{
-        grid-template-columns:1fr 1fr;
-    }
-
-    .product-image{
-        height:190px;
-    }
-
-    .product-info{
-        padding:12px;
-    }
-
-    .product-info h3{
-        font-size:11px;
-    }
-
-    .price{
-        font-size:14px;
-    }
-
-    .footer-grid{
-        grid-template-columns:1fr;
-    }
-
-    .cart-panel{
-        width:100%;
-        max-width:100%;
-    }
-}
-</style>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- TOP BAR -->
-<div class="topbar">
-    ✨ NEW COLLECTION 2026 — Special Offer Available
-</div>
+  <!-- =========================================================
+       HEADER / NAVIGATION
+  ========================================================== -->
+  <header class="site-header" id="top">
 
-<!-- NAVBAR -->
-<nav class="navbar">
+    <div class="container nav-container">
 
-    <div class="logo">
-        Anjona
-        <span>LADIES TAILORS</span>
-    </div>
+      <a href="#home" class="brand" aria-label="Anjona Ladies Tailors Home">
 
-    <ul class="nav-links" id="navLinks">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#categories">Collections</a></li>
-        <li><a href="#products">Three Piece</a></li>
-        <li><a href="#tailoring">Tailoring</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-
-    <div class="nav-actions">
-
-        <button class="icon-btn" title="Search">
-            ⌕
-        </button>
-
-        <button class="icon-btn" onclick="openCart()" title="Cart">
-            🛍
-        </button>
-
-        <button class="menu-btn" onclick="toggleMenu()">
-            ☰
-        </button>
-
-    </div>
-
-</nav>
-
-<!-- HERO -->
-<section class="hero" id="home">
-
-    <div class="hero-content">
-
-        <div class="small-title">
-            ANJONA LADIES TAILORS
+        <div class="brand-logo">
+          <img
+            src="https://raw.githubusercontent.com/yourdocuments/products/main/Anjonatailorslogo2.svg.svg"
+            alt="Anjona Ladies Tailors Logo"
+          >
         </div>
 
-        <h1>
-            Elegance<br>
-            <span>Crafted</span> For You
-        </h1>
-
-        <p>
-            Premium ladies fashion, beautiful three-piece collections
-            and professional tailoring — designed to make every woman
-            feel confident and elegant.
-        </p>
-
-        <div class="hero-buttons">
-
-            <a href="#products" class="primary-btn">
-                Shop Collection →
-            </a>
-
-            <a href="#tailoring" class="secondary-btn">
-                Book Tailoring
-            </a>
-
+        <div class="brand-text">
+          <strong>Anjona</strong>
+          <span>Ladies Tailors</span>
         </div>
 
-    </div>
+      </a>
 
-</section>
 
-<!-- COLLECTIONS -->
-<section class="section" id="categories">
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
-    <div class="section-heading">
 
-        <div class="label">
-            EXPLORE
-        </div>
+      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
 
-        <h2>
-            Our Collections
-        </h2>
+        <a href="#home">হোম</a>
 
-        <p>
-            আপনার পছন্দের fashion collection বেছে নিন
-        </p>
+        <a href="#services">সেবা</a>
 
-    </div>
+        <a href="#design">ডিজাইন</a>
 
-    <div class="categories">
+        <a href="#reviews">রিভিউ</a>
 
-        <div class="category">
+        <a href="#contact">যোগাযোগ</a>
 
-            <img src="https://images.unsplash.com/photo-1583391733956-6c78276477e2?auto=format&fit=crop&w=700&q=85">
-
-            <div class="category-overlay">
-                <h3>Three Piece</h3>
-            </div>
-
-        </div>
-
-        <div class="category">
-
-            <img src="https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=700&q=85">
-
-            <div class="category-overlay">
-                <h3>Fabrics</h3>
-            </div>
-
-        </div>
-
-        <div class="category">
-
-            <img src="https://images.unsplash.com/photo-1564257577054-5d3e6c8a2b1e?auto=format&fit=crop&w=700&q=85">
-
-            <div class="category-overlay">
-                <h3>Kamiz</h3>
-            </div>
-
-        </div>
-
-        <div class="category">
-
-            <img src="https://images.unsplash.com/photo-1596755389378-c31d21fd1273?auto=format&fit=crop&w=700&q=85">
-
-            <div class="category-overlay">
-                <h3>Orna</h3>
-            </div>
-
-        </div>
-
-        <div class="category">
-
-            <img src="https://images.unsplash.com/photo-1591369822096-ffd140ec948f?auto=format&fit=crop&w=700&q=85">
-
-            <div class="category-overlay">
-                <h3>Tailoring</h3>
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- PRODUCTS -->
-<section class="section products" id="products">
-
-    <div class="section-heading">
-
-        <div class="label">
-            NEW ARRIVALS
-        </div>
-
-        <h2>
-            Trending Collection
-        </h2>
-
-        <p>
-            Our latest premium ladies collection
-        </p>
-
-    </div>
-
-    <div class="product-grid">
-
-        <!-- PRODUCT 1 -->
-
-        <div class="product">
-
-            <div class="product-image">
-
-                <span class="badge">
-                    NEW
-                </span>
-
-                <button class="heart">
-                    ♡
-                </button>
-
-                <img src="https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=700&q=85">
-
-            </div>
-
-            <div class="product-info">
-
-                <div class="type">
-                    THREE PIECE
-                </div>
-
-                <h3>
-                    Elegant Printed Three Piece
-                </h3>
-
-                <span class="price">
-                    ৳ 1,450
-                </span>
-
-                <span class="old-price">
-                    ৳ 1,700
-                </span>
-
-                <button
-                    class="add-cart"
-                    onclick="addToCart('Elegant Printed Three Piece',1450)"
-                >
-                    Add to Cart
-                </button>
-
-            </div>
-
-        </div>
-
-        <!-- PRODUCT 2 -->
-
-        <div class="product">
-
-            <div class="product-image">
-
-                <span class="badge">
-                    SALE
-                </span>
-
-                <button class="heart">
-                    ♡
-                </button>
-
-                <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=700&q=85">
-
-            </div>
-
-            <div class="product-info">
-
-                <div class="type">
-                    PREMIUM
-                </div>
-
-                <h3>
-                    Premium Cotton Collection
-                </h3>
-
-                <span class="price">
-                    ৳ 1,250
-                </span>
-
-                <span class="old-price">
-                    ৳ 1,500
-                </span>
-
-                <button
-                    class="add-cart"
-                    onclick="addToCart('Premium Cotton Collection',1250)"
-                >
-                    Add to Cart
-                </button>
-
-            </div>
-
-        </div>
-
-        <!-- PRODUCT 3 -->
-
-        <div class="product">
-
-            <div class="product-image">
-
-                <button class="heart">
-                    ♡
-                </button>
-
-                <img src="https://images.unsplash.com/photo-1583391733956-6c78276477e2?auto=format&fit=crop&w=700&q=85">
-
-            </div>
-
-            <div class="product-info">
-
-                <div class="type">
-                    EMBROIDERED
-                </div>
-
-                <h3>
-                    Embroidered Festive Dress
-                </h3>
-
-                <span class="price">
-                    ৳ 2,250
-                </span>
-
-                <button
-                    class="add-cart"
-                    onclick="addToCart('Embroidered Festive Dress',2250)"
-                >
-                    Add to Cart
-                </button>
-
-            </div>
-
-        </div>
-
-        <!-- PRODUCT 4 -->
-
-        <div class="product">
-
-            <div class="product-image">
-
-                <span class="badge">
-                    HOT
-                </span>
-
-                <button class="heart">
-                    ♡
-                </button>
-
-                <img src="https://images.unsplash.com/photo-1596755389378-c31d21fd1273?auto=format&fit=crop&w=700&q=85">
-
-            </div>
-
-            <div class="product-info">
-
-                <div class="type">
-                    UNSTITCHED
-                </div>
-
-                <h3>
-                    Premium Lawn Three Piece
-                </h3>
-
-                <span class="price">
-                    ৳ 1,850
-                </span>
-
-                <button
-                    class="add-cart"
-                    onclick="addToCart('Premium Lawn Three Piece',1850)"
-                >
-                    Add to Cart
-                </button>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- TAILORING -->
-<section class="section tailoring" id="tailoring">
-
-    <div class="tailoring-wrap">
-
-        <div class="tailoring-image">
-
-            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1000&q=85">
-
-        </div>
-
-        <div class="tailoring-content">
-
-            <div class="label">
-                OUR TAILORING SERVICE
-            </div>
-
-            <h2>
-                Perfect Fit,<br>
-                Made For You
-            </h2>
-
-            <p>
-                আপনার পছন্দের design এবং measurement অনুযায়ী
-                professional tailoring service। সুন্দর fitting,
-                clean stitching এবং custom design।
-            </p>
-
-            <div class="services">
-
-                <div class="service">
-
-                    <div class="service-icon">
-                        📏
-                    </div>
-
-                    <h4>
-                        Perfect Measurement
-                    </h4>
-
-                    <p>
-                        নিখুঁত মাপ নেওয়ার সুবিধা
-                    </p>
-
-                </div>
-
-                <div class="service">
-
-                    <div class="service-icon">
-                        ✂️
-                    </div>
-
-                    <h4>
-                        Custom Design
-                    </h4>
-
-                    <p>
-                        আপনার পছন্দের ডিজাইন
-                    </p>
-
-                </div>
-
-                <div class="service">
-
-                    <div class="service-icon">
-                        🧵
-                    </div>
-
-                    <h4>
-                        Quality Stitching
-                    </h4>
-
-                    <p>
-                        দক্ষ কারিগরের সেলাই
-                    </p>
-
-                </div>
-
-                <div class="service">
-
-                    <div class="service-icon">
-                        ✨
-                    </div>
-
-                    <h4>
-                        Alteration
-                    </h4>
-
-                    <p>
-                        প্রয়োজন অনুযায়ী alteration
-                    </p>
-
-                </div>
-
-            </div>
-
-            <a href="#contact" class="primary-btn">
-                Book Your Tailoring
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- OFFER -->
-<div class="offer">
-
-    <div>
-
-        <div class="small-title">
-            SPECIAL OFFER
-        </div>
-
-        <h2>
-            New Season<br>
-            Collection
-        </h2>
-
-        <p>
-            নির্বাচিত কালেকশনে বিশেষ ছাড়
-        </p>
-
-        <a href="#products" class="primary-btn">
-            Shop Now →
+        <a
+          href="https://anjonafabrics.com"
+          class="nav-fabric-btn"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          কাপড় কিনুন ↗
         </a>
 
-    </div>
-
-</div>
-
-<!-- REVIEWS -->
-<section class="section">
-
-    <div class="section-heading">
-
-        <div class="label">
-            CUSTOMER LOVE
-        </div>
-
-        <h2>
-            What Our Customers Say
-        </h2>
+      </nav>
 
     </div>
 
-    <div class="reviews">
+  </header>
 
-        <div class="review">
 
-            <div class="stars">
-                ★★★★★
+  <main>
+
+    <!-- =======================================================
+         NOTICE
+    ======================================================== -->
+    <section class="notice-section" aria-label="Special Notice">
+
+      <div class="container">
+
+        <a
+          href="https://milonmelay.com"
+          class="notice-card"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+
+          <span class="notice-icon" aria-hidden="true">✦</span>
+
+          <span class="notice-content">
+
+            <strong>বিশেষ Notice</strong>
+
+            <span>
+              চলো <b>“মিলনমেলায়”</b> যাই উষাকে খুঁজতে
+            </span>
+
+            <small>
+              উষা কে? জানতে ক্লিক করুন →
+            </small>
+
+          </span>
+
+          <span class="notice-arrow" aria-hidden="true">↗</span>
+
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- =======================================================
+         HERO
+    ======================================================== -->
+    <section class="hero-section" id="home">
+
+      <div class="container hero-grid">
+
+        <div class="hero-content">
+
+          <span class="eyebrow">
+            ✦ Ladies Only Tailoring Service
+          </span>
+
+          <h1>
+            আপনার পছন্দ,
+            <span>আমাদের যত্নে।</span>
+          </h1>
+
+          <p class="hero-description">
+            সুন্দর ডিজাইন, নিখুঁত কাটিং ও যত্নসহকারে
+            তৈরি পোশাক — শুধুমাত্র নারীদের জন্য।
+          </p>
+
+          <div class="hero-actions">
+
+            <a href="#services" class="btn btn-primary">
+              আমাদের সেবা দেখুন
+              <span>→</span>
+            </a>
+
+            <a href="#contact" class="btn btn-secondary">
+              যোগাযোগ করুন
+            </a>
+
+          </div>
+
+
+          <div class="hero-trust">
+
+            <div class="trust-item">
+              <strong>01</strong>
+              <span>নিখুঁত কাটিং</span>
             </div>
 
-            <p>
-                “কাপড়ের quality অনেক ভালো। Design সুন্দর
-                এবং tailoring service-ও অনেক neat.”
-            </p>
-
-            <div class="customer">
-
-                <div class="avatar">
-                    S
-                </div>
-
-                <div>
-                    <strong>Sumaiya</strong>
-                    <small>Happy Customer</small>
-                </div>
-
+            <div class="trust-item">
+              <strong>02</strong>
+              <span>সুন্দর ডিজাইন</span>
             </div>
+
+            <div class="trust-item">
+              <strong>03</strong>
+              <span>যত্নসহকারে সেলাই</span>
+            </div>
+
+          </div>
 
         </div>
 
-        <div class="review">
 
-            <div class="stars">
-                ★★★★★
+        <div class="hero-visual">
+
+          <div class="hero-card">
+
+            <div class="hero-pattern"></div>
+
+            <div class="hero-card-content">
+
+              <span class="hero-badge">
+                Ladies Collection
+              </span>
+
+              <h2>
+                Elegance<br>
+                With Modesty
+              </h2>
+
+              <p>
+                Simple • Elegant • Comfortable
+              </p>
+
             </div>
 
-            <p>
-                “নিজের পছন্দের design দিয়ে dress বানিয়েছি।
-                fitting একদম perfect হয়েছে।”
-            </p>
-
-            <div class="customer">
-
-                <div class="avatar">
-                    N
-                </div>
-
-                <div>
-                    <strong>Nusrat</strong>
-                    <small>Happy Customer</small>
-                </div>
-
+            <div class="hero-flower" aria-hidden="true">
+              ✿
             </div>
+
+          </div>
+
+
+          <div class="floating-card floating-card-one">
+
+            <span>✂</span>
+
+            <div>
+              <strong>Perfect Cut</strong>
+              <small>Design & Cutting</small>
+            </div>
+
+          </div>
+
+
+          <div class="floating-card floating-card-two">
+
+            <span>♡</span>
+
+            <div>
+              <strong>Made With Care</strong>
+              <small>For Every Customer</small>
+            </div>
+
+          </div>
 
         </div>
 
-        <div class="review">
+      </div>
 
-            <div class="stars">
-                ★★★★★
-            </div>
+    </section>
 
-            <p>
-                “Three piece collection অনেক সুন্দর।
-                আবার shopping করতে অবশ্যই আসব।”
-            </p>
 
-            <div class="customer">
+    <!-- =======================================================
+         QUICK INTRO
+    ======================================================== -->
+    <section class="intro-section">
 
-                <div class="avatar">
-                    R
-                </div>
+      <div class="container intro-grid">
 
-                <div>
-                    <strong>Raisa</strong>
-                    <small>Happy Customer</small>
-                </div>
+        <div class="intro-heading">
 
-            </div>
+          <span class="section-label">
+            ANJONA LADIES TAILORS
+          </span>
+
+          <h2>
+            পোশাক শুধু পোশাক নয়,
+            <span>এটি আপনার সৌন্দর্যের অংশ।</span>
+          </h2>
 
         </div>
 
-    </div>
+        <div class="intro-text">
 
-</section>
+          <p>
+            আপনার প্রয়োজন ও পছন্দকে গুরুত্ব দিয়ে
+            আমরা ladies tailoring, design এবং cutting
+            service দেওয়ার চেষ্টা করি।
+          </p>
 
-<!-- CONTACT -->
-<section class="section contact" id="contact">
+          <p>
+            আমাদের লক্ষ্য — সহজ, পরিপাটি, মার্জিত এবং
+            আরামদায়ক পোশাক তৈরি করা।
+          </p>
 
-    <div class="contact-box">
+        </div>
 
-        <div class="contact-info">
+      </div>
 
-            <div class="small-title">
-                GET IN TOUCH
-            </div>
+    </section>
+
+
+    <!-- =======================================================
+         SERVICES
+    ======================================================== -->
+    <section class="services-section section-padding" id="services">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <span class="section-label">
+            আমাদের সেবা
+          </span>
+
+          <h2>
+            আপনার প্রয়োজনের জন্য
+            <span>সবকিছু এক জায়গায়</span>
+          </h2>
+
+          <p>
+            Ladies পোশাক তৈরির জন্য প্রয়োজনীয়
+            প্রধান সেবাগুলো আমরা যত্নসহকারে দিয়ে থাকি।
+          </p>
+
+        </div>
+
+
+        <div class="services-grid">
+
+          <article class="service-card">
+
+            <div class="service-number">01</div>
+
+            <div class="service-icon">✂</div>
+
+            <h3>Design & Cutting</h3>
+
+            <p>
+              আপনার পছন্দ অনুযায়ী পোশাকের ডিজাইন
+              ও মাপ অনুযায়ী নিখুঁত কাটিং।
+            </p>
+
+            <a href="#design">
+              বিস্তারিত দেখুন →
+            </a>
+
+          </article>
+
+
+          <article class="service-card featured-service">
+
+            <div class="service-number">02</div>
+
+            <div class="service-icon">♢</div>
+
+            <h3>Ladies Tailoring</h3>
+
+            <p>
+              নারীদের বিভিন্ন ধরনের পোশাক
+              যত্ন ও সুন্দর finishing-এর সঙ্গে তৈরি।
+            </p>
+
+            <a href="#contact">
+              অর্ডার সম্পর্কে জানুন →
+            </a>
+
+          </article>
+
+
+          <article class="service-card">
+
+            <div class="service-number">03</div>
+
+            <div class="service-icon">♡</div>
+
+            <h3>Custom Design</h3>
+
+            <p>
+              আপনার নিজের পছন্দের design,
+              style ও fitting অনুযায়ী custom tailoring।
+            </p>
+
+            <a href="#contact">
+              আলোচনা করুন →
+            </a>
+
+          </article>
+
+
+          <article class="service-card">
+
+            <div class="service-number">04</div>
+
+            <div class="service-icon">▱</div>
+
+            <h3>Fabric Collection</h3>
+
+            <p>
+              কাপড় কেনার জন্য আমাদের আলাদা
+              Anjona Fabrics website-এ যেতে পারেন।
+            </p>
+
+            <a
+              href="https://anjonafabrics.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              কাপড় দেখুন ↗
+            </a>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =======================================================
+         FABRICS CTA
+    ======================================================== -->
+    <section class="fabric-section">
+
+      <div class="container">
+
+        <div class="fabric-banner">
+
+          <div class="fabric-content">
+
+            <span class="section-label">
+              ANJONA FABRICS
+            </span>
 
             <h2>
-                Visit Anjona
+              কাপড়ও লাগবে?
+              <span>এক ক্লিকেই চলে যান।</span>
             </h2>
 
             <p>
-                আপনার পছন্দের কাপড়, three piece অথবা
-                tailoring service সম্পর্কে জানতে আমাদের
-                সাথে যোগাযোগ করুন।
+              বিভিন্ন ধরনের কাপড় ও fabric collection
+              দেখতে আমাদের fabrics website-এ ভিজিট করুন।
             </p>
 
-            <div class="contact-details">
+            <a
+              href="https://anjonafabrics.com"
+              class="btn btn-light"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Anjona Fabrics দেখুন
+              <span>↗</span>
+            </a>
 
-                <div class="contact-item">
+          </div>
 
-                    <div class="contact-icon">
-                        📍
-                    </div>
 
-                    <div>
-                        <strong>Shop Address</strong><br>
-                        <span>Bangladesh</span>
-                    </div>
+          <div class="fabric-decoration" aria-hidden="true">
 
-                </div>
+            <div class="fabric-circle circle-one"></div>
 
-                <div class="contact-item">
+            <div class="fabric-circle circle-two"></div>
 
-                    <div class="contact-icon">
-                        📞
-                    </div>
+            <div class="fabric-symbol">✿</div>
 
-                    <div>
-                        <strong>Phone</strong><br>
-                        <span>01XXXXXXXXX</span>
-                    </div>
-
-                </div>
-
-                <div class="contact-item">
-
-                    <div class="contact-icon">
-                        🕐
-                    </div>
-
-                    <div>
-                        <strong>Opening Hours</strong><br>
-                        <span>10:00 AM — 9:00 PM</span>
-                    </div>
-
-                </div>
-
-            </div>
+          </div>
 
         </div>
 
-        <form
-            class="contact-form"
-            onsubmit="sendMessage(event)"
-        >
+      </div>
 
-            <h3>
-                Send a Message
-            </h3>
+    </section>
 
-            <input
-                class="input"
-                type="text"
-                placeholder="Your Name"
-                required
-            >
 
-            <input
-                class="input"
-                type="tel"
-                placeholder="Phone Number"
-                required
-            >
+    <!-- =======================================================
+         DESIGN & CUTTING
+    ======================================================== -->
+    <section class="design-section section-padding" id="design">
 
-            <select class="input">
+      <div class="container design-grid">
 
-                <option>
-                    Select Service
-                </option>
+        <div class="design-visual">
 
-                <option>
-                    Three Piece
-                </option>
+          <div class="design-frame">
 
-                <option>
-                    Fabric
-                </option>
+            <div class="design-placeholder">
 
-                <option>
-                    Tailoring
-                </option>
+              <span class="placeholder-icon">✂</span>
 
-                <option>
-                    Alteration
-                </option>
+              <strong>
+                Design & Cutting
+              </strong>
 
-            </select>
+              <small>
+                Showcase image will be added here
+              </small>
 
-            <textarea
-                class="input"
-                placeholder="Your Message"
-            ></textarea>
+            </div>
 
-            <button
-                class="primary-btn"
-                type="submit"
-            >
-                Send Message
-            </button>
+          </div>
 
-        </form>
+          <div class="design-stamp">
+            <span>ANJONA</span>
+            <small>LADIES TAILORS</small>
+          </div>
 
-    </div>
+        </div>
 
-</section>
 
-<!-- FOOTER -->
-<footer>
+        <div class="design-content">
 
-    <div class="footer-grid">
+          <span class="section-label">
+            DESIGN & CUTTING
+          </span>
 
-        <div class="footer-col">
+          <h2>
+            মাপ থেকে
+            <span>নিখুঁত কাটিং</span>
+          </h2>
 
-            <div class="footer-logo">
-                Anjona
+          <p>
+            একটি সুন্দর পোশাকের শুরু হয় সঠিক মাপ ও
+            সুন্দর কাটিং থেকে। তাই প্রতিটি কাজের
+            ক্ষেত্রে আমরা মাপ, design এবং fitting-এর
+            দিকে গুরুত্ব দিতে চাই।
+          </p>
+
+
+          <ul class="feature-list">
+
+            <li>
+              <span>✓</span>
+              <div>
+                <strong>সঠিক মাপ</strong>
+                <small>আপনার প্রয়োজন অনুযায়ী measurement</small>
+              </div>
+            </li>
+
+            <li>
+              <span>✓</span>
+              <div>
+                <strong>পরিপাটি কাটিং</strong>
+                <small>সুন্দর fitting-এর জন্য careful cutting</small>
+              </div>
+            </li>
+
+            <li>
+              <span>✓</span>
+              <div>
+                <strong>পছন্দের ডিজাইন</strong>
+                <small>আপনার style ও প্রয়োজনকে গুরুত্ব</small>
+              </div>
+            </li>
+
+          </ul>
+
+
+          <a href="#contact" class="text-link">
+            আপনার design নিয়ে কথা বলুন →
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =======================================================
+         REVIEWS
+    ======================================================== -->
+    <section class="reviews-section section-padding" id="reviews">
+
+      <div class="container">
+
+        <div class="section-heading centered">
+
+          <span class="section-label">
+            CUSTOMER REVIEWS
+          </span>
+
+          <h2>
+            আমাদের customers
+            <span>কী বলছেন?</span>
+          </h2>
+
+          <p>
+            আমাদের customer-এর অভিজ্ঞতা আমাদের জন্য
+            সবচেয়ে গুরুত্বপূর্ণ।
+          </p>
+
+        </div>
+
+
+        <div class="reviews-grid">
+
+          <article class="review-card">
+
+            <div class="review-stars">
+              ★★★★★
             </div>
 
             <p>
-                LADIES TAILORS<br><br>
-                Fashion, fabrics & perfect tailoring
-                for every woman.
+              “ডিজাইনটা আমার অনেক পছন্দ হয়েছে।
+              fitting-ও সুন্দর হয়েছে।”
             </p>
 
+            <div class="review-author">
+
+              <div class="author-avatar">
+                A
+              </div>
+
+              <div>
+                <strong>Customer</strong>
+                <small>Local Customer</small>
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <article class="review-card">
+
+            <div class="review-stars">
+              ★★★★★
+            </div>
+
+            <p>
+              “কাজ খুব সুন্দর ও পরিপাটি হয়েছে।
+              আবারও আসতে চাই।”
+            </p>
+
+            <div class="review-author">
+
+              <div class="author-avatar">
+                R
+              </div>
+
+              <div>
+                <strong>Customer</strong>
+                <small>Local Customer</small>
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <article class="review-card">
+
+            <div class="review-stars">
+              ★★★★★
+            </div>
+
+            <p>
+              “ব্যবহার ভালো, কাজও সুন্দর।
+              নিজের পছন্দ অনুযায়ী কাজ করিয়ে নিতে পেরেছি।”
+            </p>
+
+            <div class="review-author">
+
+              <div class="author-avatar">
+                S
+              </div>
+
+              <div>
+                <strong>Customer</strong>
+                <small>Local Customer</small>
+              </div>
+
+            </div>
+
+          </article>
+
         </div>
 
-        <div class="footer-col">
+      </div>
 
-            <h4>
-                Shop
-            </h4>
+    </section>
 
-            <a href="#products">
-                Three Piece
-            </a>
 
-            <a href="#products">
-                New Collection
-            </a>
+    <!-- =======================================================
+         CONTACT CTA
+    ======================================================== -->
+    <section class="contact-section" id="contact">
 
-            <a href="#categories">
-                Fabrics
-            </a>
+      <div class="container">
 
-            <a href="#categories">
-                Kamiz
-            </a>
+        <div class="contact-card">
 
-        </div>
+          <div class="contact-content">
 
-        <div class="footer-col">
-
-            <h4>
-                Services
-            </h4>
-
-            <a href="#tailoring">
-                Tailoring
-            </a>
-
-            <a href="#tailoring">
-                Custom Design
-            </a>
-
-            <a href="#tailoring">
-                Alteration
-            </a>
-
-        </div>
-
-        <div class="footer-col">
-
-            <h4>
-                Contact
-            </h4>
-
-            <a href="#">
-                📞 01XXXXXXXXX
-            </a>
-
-            <a href="#">
-                💬 WhatsApp
-            </a>
-
-            <a href="#">
-                📘 Facebook
-            </a>
-
-            <a href="#contact">
-                📍 Location
-            </a>
-
-        </div>
-
-    </div>
-
-    <div class="footer-bottom">
-        © 2026 Anjona Ladies Tailors — All Rights Reserved.
-    </div>
-
-</footer>
-
-<!-- CART -->
-<div class="cart-panel" id="cartPanel">
-
-    <div class="cart-head">
-
-        <h2>
-            Your Cart
-        </h2>
-
-        <button
-            class="close-cart"
-            onclick="closeCart()"
-        >
-            ×
-        </button>
-
-    </div>
-
-    <div
-        class="cart-items"
-        id="cartItems"
-    >
-        <p class="cart-empty">
-            Your cart is empty.
-        </p>
-    </div>
-
-    <div class="cart-total">
-
-        <strong>
-            Total: ৳
-            <span id="cartTotal">
-                0
+            <span class="section-label">
+              LET'S TALK
             </span>
-        </strong>
 
-        <button
-            class="checkout"
-            onclick="checkout()"
+            <h2>
+              আপনার পোশাকের
+              <span>design নিয়ে কথা বলুন।</span>
+            </h2>
+
+            <p>
+              আপনার প্রয়োজন, পছন্দ বা design সম্পর্কে
+              আমাদের সঙ্গে যোগাযোগ করুন।
+            </p>
+
+          </div>
+
+
+          <div class="contact-actions">
+
+            <a href="tel:+8800000000000" class="btn btn-light">
+              ☎ কল করুন
+            </a>
+
+            <a href="#top" class="btn btn-outline-light">
+              ↑ উপরে যান
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================================================
+       DEVELOPER CONNECT
+       Must remain immediately above footer
+  ========================================================== -->
+  <section class="developer-section">
+
+    <div class="container">
+
+      <div class="developer-card">
+
+        <div class="developer-icon">
+          &lt;/&gt;
+        </div>
+
+        <div class="developer-content">
+
+          <span>
+            WEBSITE DEVELOPMENT
+          </span>
+
+          <h2>
+            আপনার business-এর জন্য
+            <strong>নিজস্ব website</strong> দরকার?
+          </h2>
+
+          <p>
+            Website design ও development সম্পর্কে
+            জানতে Developer-এর সঙ্গে যোগাযোগ করুন।
+          </p>
+
+        </div>
+
+        <a
+          href="#"
+          class="developer-btn"
+          id="developerConnect"
         >
-            Proceed to Order
-        </button>
+          Developer Connect
+          <span>↗</span>
+        </a>
+
+      </div>
 
     </div>
 
-</div>
+  </section>
 
-<!-- TOAST -->
-<div class="toast" id="toast">
-    Added to cart ✓
-</div>
 
-<script>
+  <!-- =========================================================
+       FOOTER
+  ========================================================== -->
+  <footer class="site-footer">
 
-let cart = [];
+    <div class="container footer-grid">
 
-/* MOBILE MENU */
+      <div class="footer-brand">
 
-function toggleMenu(){
+        <a href="#home" class="brand footer-logo">
 
-    document
-        .getElementById("navLinks")
-        .classList.toggle("active");
+          <div class="brand-logo">
+            <img
+              src="https://raw.githubusercontent.com/yourdocuments/products/main/Anjonatailorslogo2.svg.svg"
+              alt="Anjona Ladies Tailors"
+            >
+          </div>
 
-}
+          <div class="brand-text">
+            <strong>Anjona</strong>
+            <span>Ladies Tailors</span>
+          </div>
 
-/* CART */
+        </a>
 
-function openCart(){
+        <p>
+          Ladies tailoring, design & cutting —
+          simple, সুন্দর ও যত্নসহকারে।
+        </p>
 
-    document
-        .getElementById("cartPanel")
-        .classList.add("active");
+      </div>
 
-}
 
-function closeCart(){
+      <div class="footer-column">
 
-    document
-        .getElementById("cartPanel")
-        .classList.remove("active");
+        <h3>Quick Links</h3>
 
-}
+        <a href="#home">হোম</a>
+        <a href="#services">সেবা</a>
+        <a href="#design">ডিজাইন</a>
+        <a href="#reviews">রিভিউ</a>
+        <a href="#contact">যোগাযোগ</a>
 
-/* ADD PRODUCT */
+      </div>
 
-function addToCart(name,price){
 
-    cart.push({
-        name:name,
-        price:price
-    });
+      <div class="footer-column">
 
-    updateCart();
+        <h3>Our Websites</h3>
 
-    showToast("Added to cart ✓");
+        <a
+          href="https://anjonafabrics.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Anjona Fabrics ↗
+        </a>
 
-    openCart();
+        <a
+          href="https://milonmelay.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Milonmelay ↗
+        </a>
 
-}
+      </div>
 
-/* UPDATE CART */
 
-function updateCart(){
+      <div class="footer-column">
 
-    const container =
-        document.getElementById("cartItems");
+        <h3>আমাদের লক্ষ্য</h3>
 
-    const totalElement =
-        document.getElementById("cartTotal");
+        <p class="footer-note">
+          সাদাসিধে, মার্জিত ও customer-friendly
+          ladies tailoring service।
+        </p>
 
-    if(cart.length === 0){
+      </div>
 
-        container.innerHTML =
-            '<p class="cart-empty">Your cart is empty.</p>';
+    </div>
 
-        totalElement.innerText = "0";
 
-        return;
-    }
+    <div class="container footer-bottom">
 
-    let total = 0;
+      <p>
+        © <span id="currentYear">2026</span>
+        Anjona Ladies Tailors. All rights reserved.
+      </p>
 
-    container.innerHTML =
-        cart.map((item,index)=>{
+      <span>
+        Made with care ✦
+      </span>
 
-            total += item.price;
+    </div>
 
-            return `
-                <div class="cart-item">
+  </footer>
 
-                    <div>
-                        <strong>
-                            ${item.name}
-                        </strong>
 
-                        <br>
-
-                        <span>
-                            ৳ ${item.price.toLocaleString()}
-                        </span>
-                    </div>
-
-                    <button
-                        class="remove"
-                        onclick="removeItem(${index})"
-                    >
-                        ×
-                    </button>
-
-                </div>
-            `;
-
-        }).join("");
-
-    totalElement.innerText =
-        total.toLocaleString();
-
-}
-
-/* REMOVE */
-
-function removeItem(index){
-
-    cart.splice(index,1);
-
-    updateCart();
-
-}
-
-/* CHECKOUT */
-
-function checkout(){
-
-    if(cart.length === 0){
-
-        showToast("Your cart is empty");
-
-        return;
-    }
-
-    alert(
-        "Thank you for your order request!\n\n" +
-        "Anjona Ladies Tailors will contact you shortly."
-    );
-
-}
-
-/* CONTACT */
-
-function sendMessage(event){
-
-    event.preventDefault();
-
-    alert(
-        "Thank you!\n\n" +
-        "Your message has been submitted successfully."
-    );
-
-    event.target.reset();
-
-}
-
-/* TOAST */
-
-function showToast(message){
-
-    const toast =
-        document.getElementById("toast");
-
-    toast.innerText = message;
-
-    toast.classList.add("show");
-
-    setTimeout(()=>{
-
-        toast.classList.remove("show");
-
-    },1800);
-
-}
-
-/* HEART */
-
-document
-    .querySelectorAll(".heart")
-    .forEach(button=>{
-
-        button.addEventListener(
-            "click",
-            function(){
-
-                if(this.innerText === "♡"){
-
-                    this.innerText = "♥";
-
-                    this.style.color =
-                        "#f5c542";
-
-                }else{
-
-                    this.innerText = "♡";
-
-                    this.style.color = "white";
-
-                }
-
-            }
-        );
-
-    });
-
-/* CLOSE MOBILE NAV */
-
-document
-    .querySelectorAll(".nav-links a")
-    .forEach(link=>{
-
-        link.addEventListener(
-            "click",
-            function(){
-
-                document
-                    .getElementById("navLinks")
-                    .classList.remove("active");
-
-            }
-        );
-
-    });
-
-</script>
+  <!-- =========================================================
+       JAVASCRIPT
+  ========================================================== -->
+  <script src="script.js"></script>
 
 </body>
 </html>
